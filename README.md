@@ -1,13 +1,12 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
- # \<Fantasy Brawl\>
- > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Burhanuddin Taquee](https://github.com/btaquee)\>
->           \<[Amandeep Singh](https://github.com/AmandepSingh180d)\>
->           \<[Shasha Chen](https:://github.com/ShashaChen616)\>
->           \<[Cruz Lopez](https://github.com/CruzL0924)\>
+ # \Fantasy Brawl\
+ > Authors: \[Burhanuddin Taquee](https://github.com/btaquee)\
+>           \[Amandeep Singh](https://github.com/AmandepSingh180d)\
+>           \[Shasha Chen](https://github.com/ShashaChen616)\
+>           \[Cruz Lopez](https://github.com/CruzL0924)\
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -19,21 +18,19 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
+ > Why is it important or interesting to you?
 >  *   This game will be a great experience for us and will teach us more about collaborating on a real-world project. We are all interested in fantasy RPG games so it will be great to implement our own, and branch out our creativity. Having different types of mythical characters brawling to the death will be a massive hit among fantasy lovers. 
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ > What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
 >  *   We will use VS code to write our code and GitHub for version control. Our main language for the backend will be C++. Scrum patterns, user stories.
- > * What will be the input/output of your project?
+ > What will be the input/output of your project?
 >  *   Menu will ask how many people are playing or single-player mode, and whether or not there will be CPUs playing as well. Users will input their choice of character. Users can see character stats, inventory, and health. Console will output actions and/or damage after turns. As each player is eliminated console will output who defeated who. Console will output the last man standing as the winner. Will input who they want to attack, ally with, or other actions.
- > * What are the features that the project provides?
+ > What are the features that the project provides?
 >  *   Single-player mode: User will choose a character, and begin quest to the top of the Fantasy Brawl tower, battling progressively difficult adversaries to win the Fantasy Brawl trophy.
 >  *   Multiplayer mode: Up to 6 characters will brawl to the death! There can be live players as well as CPUs. Players can form alliances to attack certain players together. Stat changes when alliances are     formed. Last man standing takes home the Fantasy Brawl trophy. 
 >  *   Each character will have a set of powers, attributes, inventories, weapons, health, attacks, and skills.
 >  *   Players will roll dice to determine the moves they can make. Will input who they want to attack, or ally with.
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
- > 
- > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
+
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
