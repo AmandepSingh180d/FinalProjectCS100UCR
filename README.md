@@ -17,43 +17,43 @@
 ### Navigation Diagram
 > <img width="955" alt="nav1" src="https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/navDiagram.png">
 
-> User  starts at title screen. Chooses single or multiplayer mode. 
+ User starts at title screen. Then chooses single or multiplayer mode. Once option is selected then it will proceed as below:
  
- > * Multiplayer - User is prompted to input number of players, once done is then sent to choose character screen to choose one of 4 different characters with all stats appearing. This will repeat for how many players that are playing with a slight difference to Player _ is choosing. Players will roll to determine turn order. Then game begins at battle screen, where battle is looped for each players turns until there is only on player standing. Each turn players will choose to attack or add to inventory based on dice outcome. Once a player chooses an action, that action will pop up a new menu liting the different kinds of actions or even the inventory screen. Once the action is chosen, the battle screen will loop, but with the next players' name. Once winner is determined user will be taken to trophy screen. User wil then be sent to the play again or quit game screen. Once an action is chosen, the program will end or it will loop back to the title screen depending on the action chosen by the player. 
+ * Multiplayer - User is prompted to input number of players, once done is then sent to choose character screen to choose one of 4 different characters with all stats appearing. This will repeat for how many players that are playing with a slight difference to Player _ is choosing. Players will roll to determine turn order. Then game begins at battle screen, where battle is looped for each players turns until there is only on player standing. Each turn players will choose to attack or add to inventory based on dice outcome. Once a player chooses an action, that action will pop up a new menu liting the different kinds of actions or even the inventory screen. Once the action is chosen, the battle screen will loop, but with the next players' name. Once winner is determined user will be taken to trophy screen. User wil then be sent to the play again or quit game screen. Once an action is chosen, the program will end or it will loop back to the title screen depending on the action chosen by the player. 
  
- > * Singleplayer -  Choose character screen to choose one of 4 different characters. Then game begins at battle screen, where battle is looped for the player until the big bad guy is defeated. Each turn players will choose to attack or add to inventory based on dice outcome. Once a player chooses an action, that action will pop up a new menu liting the different kinds of actions or even the inventory screen. Once the action is chosen, the battle screen will loop, but with the npc choosing their actions. Alternatively if the player fails and lands at 0 health, they will be sent to a gameover screen. If the player suceeds and defeats the big bad guy then they will be sent to obtain the trophy.User wil then be sent to the play again or quit game screen. Once an action is chosen, the program will end or it will loop back to the title screen depending on the action chosen by the player. 
+ * Singleplayer -  Choose character screen to choose one of 4 different characters. Then game begins at battle screen, where battle is looped for the player until the big bad guy is defeated. Each turn players will choose to attack or add to inventory based on dice outcome. Once a player chooses an action, that action will pop up a new menu liting the different kinds of actions or even the inventory screen. Once the action is chosen, the battle screen will loop, but with the npc choosing their actions. Alternatively if the player fails and lands at 0 health, they will be sent to a gameover screen. If the player suceeds and defeats the big bad guy then they will be sent to obtain the trophy.User wil then be sent to the play again or quit game screen. Once an action is chosen, the program will end or it will loop back to the title screen depending on the action chosen by the player. 
 ### Screen Layouts
 > ![Title Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/TitleScreen.PNG)
 
- * This is the first screen that the user will see.
+This screen above is the first screen that the user will see.
 
 > ![Choose Mode](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/ChooseMode.PNG)
 
- * The user will then be prompted with whether they would like to play multiplayer or singleplayer.
+The screen above user will then be prompted with whether they would like to play multiplayer or singleplayer.
 
 > ![Character Select](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/CharacterSelect.PNG)
 
- * They will then be prompted with which character they would like to select, this will be repeated with small changes to which player is choosing.
+They screen above will then be prompted with which character they would like to select, this will be repeated with small changes to which player is choosing.
 
 > ![Battle Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/BattleScreen.PNG)
 
- * The battle screen will then be shown to the player in which they are prompted to choose an action. This screen will be reused for listing attacks and listing inventory of the current player if the options are chosen.
+The screen above will then be shown to the player in which they are prompted to choose an action. This screen will be reused for listing attacks and listing inventory of the current player if the options are chosen.
 
 > ![Trophy Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/PlayerWins.PNG)
 
- * This screen will appear to the player when 3 out of the 4 players have 0 health or if in single player, they have defeated the big bad guy. Displaying both stats and the winner.
+This screen above will appear to the player when 3 out of the 4 players have 0 health or if in single player, they have defeated the big bad guy. Displaying both stats and the winner.
 
 > ![Game Over Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/GameOver.PNG)
 
- * This screen will appear when singleplayer is chosen and the player has 0 health and has not defeated the big bad guy.
+This screen above will appear when singleplayer is chosen and the player has 0 health and has not defeated the big bad guy.
 
 > ![Play Again Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/PlayAgain.PNG)
 
- * This screen will be produced either after the trophy screen, or after the game over screen, prompting the player to restart or quit.
+This screen above will be produced either after the trophy screen, or after the game over screen, prompting the player to restart or quit.
 
 > ![Roll Dice Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/RollDice.PNG)
 
- * This screen will show the players rolling dice, and will be edited with showing the number of the character and what they rolled, once the player enters confirm.
+This screen above will show the players rolling dice, and will be edited with showing the number of the character and what they rolled, once the player enters confirm.
 
 ## Class Diagram
  > ![cs100 uml diagram](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/UMLClassDiagram.png)
