@@ -7,7 +7,7 @@ class Archer : public Character {
         int specialPoints;
         int health;
         std::vector<std::string> Inventory = {"","","",""};
-        std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseU"};
+        std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
 
     public:
         virtual int getHealth(){
