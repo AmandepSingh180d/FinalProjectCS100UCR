@@ -41,8 +41,6 @@ std::vector<std::string> Mage::getInventory() {
 int Mage::randomizer() {
     int randNum = rand() % listOfInventory.size();
     return randNum;
-    //std::cout << randNum << std::endl;
-     //std::cout << "Work in Progress" << std::endl;
 }
     
    
