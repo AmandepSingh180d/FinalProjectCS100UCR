@@ -1,38 +1,36 @@
 #include <vector>
 #include <string>
 #include <random>
+#include "Archer.h"
+        Archer::Archer(){
 
-class Archer : public Character {
-    private:
-        int specialPoints;
-        int health;
-        std::vector<std::string> Inventory = {"","","",""};
-        std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
-
-    public:
-        virtual int getHealth(){
-            return health;
         }
-        virtual void setHealth(int newHealth){
-            health = newHealth;
+        int Archer::getHealth(){
+            return this->health;
         }
-        virtual int getSpecialPoints(){
-            return specialPoints;
+        void Archer::setHealth(int newHealth){
+            this->health = newHealth;
         }
-        virtual void setSpecialPoints(int newSP){
-            specialPoints = newSP;
+        int Archer::getSpecialPoints(){
+            return this->specialPoints;
         }
-        virtual std::vector<std::string> getInventory(){
-            return Inventory;
+        void Archer::setSpecialPoints(int newSP){
+            this->specialPoints = newSP;
         }
-        virtual void setInventory(std::vector<std::string> chosenInventory){
-            Inventory = chosenInventory;
+        std::vector<std::string> Archer::getInventory(){
+            return this->Inventory;
         }
-        void randomizer(){
-           int randVar=0; 
-            for(int i=0; i<4; ++i){
-                randVar = rand() %6 +1;
-                Inventory[i]=listOfInventory[randVar-1];
+        void Archer::setInventory(){
+            for (int i = 0; i<3; i++){
+                int num=0;
+                num = randomizer();
+                inventory.push_back(listOfInventory.at(num));
             }
         }
-};
+        int Archer::randomizer(){
+           int randNum = rand() % listOfInventory.size();
+           return randNum;
+        }
+        std::vector<std::string> Archer::getSpecialAttack(){
+            return this->SPAttackList;
+        }
