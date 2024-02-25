@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <random>
 #include "Mage.h"
 
 Mage::Mage() {
-    this->health = 100;
-    this->specialPoints = 20;
 }
 
 int Mage::getHealth() {
@@ -21,8 +20,8 @@ int Mage::getSpecialPoints() {
     return this->specialPoints;
 }
 
-void Mage::setSpecialPoints(int newSpecialPoints) {
-    this->specialPoints = newSpecialPoints;
+void Mage::setSpecialPoints(int newSP) {
+    this->specialPoints = newSP;
 }
 
 void Mage::setInventory() {
@@ -45,6 +44,6 @@ int Mage::randomizer() {
     
    
 
-std::vector<std::string> Mage::specialAttack() {
-    return this->specialAttacks;
+std::vector<std::string> Mage::getSpecialAttack() {
+    return this->SPAttackList;
 }

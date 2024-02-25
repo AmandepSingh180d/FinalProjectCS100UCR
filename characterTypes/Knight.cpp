@@ -1,12 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <random>
 #include "Knight.h"
 
 
 Knight::Knight() {
-    this->health = 100;
-    this->specialPoints = 20;
 }
 
 int Knight::getHealth() {
@@ -22,13 +21,13 @@ int Knight::getSpecialPoints() {
     return this->specialPoints;
 }
 
-void Knight::setSpecialPoints(int newSpecialPoints) {
-    this->specialPoints = newSpecialPoints;
+void Knight::setSpecialPoints(int newSP) {
+    this->specialPoints = newSP;
 }
 
 void Knight::setInventory() {
     for (int i = 0; i < 3; ++i) {
-        int num; 
+        int num = 0; 
         num = randomizer();
         inventory.push_back(listOfInventory.at(num));
     }
@@ -43,6 +42,6 @@ int Knight::randomizer() {
     return randNum;
 }
 
-std::vector<std::string> Knight::specialAttack() {
-    return this->specialAttacks;
+std::vector<std::string> Knight::getSpecialAttack() {
+    return this->SPAttackList;
 }
