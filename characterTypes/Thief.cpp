@@ -3,7 +3,9 @@
 #include <random>
 #include "Thief.h"
         Thief::Thief(){
-
+            this->health = 100;
+            this->specialPoints = 20;
+            setInventory();
         }
         int Thief::getHealth(){
             return this->health;

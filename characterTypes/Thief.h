@@ -10,11 +10,12 @@ class Thief : public Character {
     private:
         int specialPoints;
         int health;
-        std::vector<std::string> Inventory = {"","","",""};
-        std::vector<std::string> SPAttackList = {"","","",""};
+        std::vector<std::string> Inventory;
+        std::vector<std::string> SPAttackList = {"3x Stab","Shin destroyer","Backstab"};
         std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
 
     public:
+        Thief();
         virtual int getHealth();
         virtual void setHealth(int newHealth);
         virtual int getSpecialPoints();
@@ -25,4 +26,4 @@ class Thief : public Character {
         virtual std::vector<std::string> getSpecialAttack();
 };
 
-#endif // ARCHER_H
+#endif // THIEF_H

@@ -3,7 +3,9 @@
 #include <random>
 #include "Archer.h"
         Archer::Archer(){
-
+            this->health = 100;
+            this->specialPoints = 20;
+            setInventory();
         }
         int Archer::getHealth(){
             return this->health;

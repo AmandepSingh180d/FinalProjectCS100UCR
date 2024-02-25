@@ -10,11 +10,12 @@ class Archer : public Character {
     private:
         int specialPoints;
         int health;
-        std::vector<std::string> Inventory = {"","","",""};
-        std::vector<std::string> SPAttackList = {"","","",""};
+        std::vector<std::string> Inventory;
+        std::vector<std::string> SPAttackList = {"Arrow Barrage","Large Arrow","Explosive Arrow"};
         std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
 
     public:
+        Archer();
         virtual int getHealth();
         virtual void setHealth(int newHealth);
         virtual int getSpecialPoints();
