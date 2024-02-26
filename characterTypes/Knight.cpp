@@ -6,6 +6,9 @@
 
 
 Knight::Knight() {
+    this->health = 100;
+    this->specialPoints = 20;
+    setInventory();
 }
 
 int Knight::getHealth() {

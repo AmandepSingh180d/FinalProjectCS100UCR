@@ -5,6 +5,9 @@
 #include "Mage.h"
 
 Mage::Mage() {
+    this->health = 100;
+    this->specialPoints = 20;
+    setInventory();
 }
 
 int Mage::getHealth() {
