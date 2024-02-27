@@ -1,17 +1,16 @@
  # Fantasy Brawl
  > Authors: [Burhanuddin Taquee](https://github.com/btaquee), [Amandeep Singh](https://github.com/AmandepSingh180d), [Shasha Chen](https://github.com/ShashaChen616), [Cruz Lopez](https://github.com/CruzL0924)
 ## Project Description
- > * Why is it important or interesting to you?
- >   * This game will be a great experience for us and will teach us more about collaborating on a real-world project. We are all interested in fantasy RPG games so it will be great to implement our own, and branch out our creativity. Having different types of mythical characters brawling to the death will be a massive hit among fantasy lovers. 
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * We will use VS code to write our code and GitHub for version control. Our main language for the backend will be C++. Scrum patterns, user stories.
- > * What will be the input/output of your project?
->   * Menu will ask how many people are playing or single-player mode, and whether or not there will be CPUs playing as well. Users will input their choice of character. Users can see character stats, inventory, and health. Console will output actions and/or damage after turns. As each player is eliminated console will output who defeated who. Console will output the last man standing as the winner. Will input who they want to attack, ally with, or other actions.
- > * What are the features that the project provides?
->   * Single-player mode: User will choose a character, and begin quest to the top of the Fantasy Brawl tower, battling progressively difficult adversaries to win the Fantasy Brawl trophy.
->   * Multiplayer mode: Up to 6 characters will brawl to the death! There can be live players as well as CPUs. Players can form alliances to attack certain players together. Stat changes when alliances are     formed. Last man standing takes home the Fantasy Brawl trophy. 
->   * Each character will have a set of powers, attributes, inventories, weapons, health, attacks, and skills.
->   * Players will roll dice to determine the moves they can make. Will input who they want to attack, or ally with.
+  * Why is it important or interesting to you?
+    * This game will be a great experience for us and will teach us more about collaborating on a real-world project. We are all interested in fantasy RPG games so it will be great to implement our own, and branch out our creativity. Having different types of mythical characters brawling to the death will be a massive hit among fantasy lovers. 
+  * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+    * We will use VS code to write our code and GitHub for version control. Our main language for the backend will be C++. Scrum patterns, user stories.
+  * What will be the input/output of your project?
+   * Menu will ask how many people are playing or single-player mode, and whether or not there will be CPUs playing as well. Users will input their choice of character. Users can see character stats, inventory, and health. Console will output actions and/or damage after turns. As each player is eliminated console will output who defeated who. Console will output the last man standing as the winner. Will input who they want to attack, ally with, or other actions.
+  * What are the features that the project provides?
+   * Multiplayer mode: Up to 6 characters will brawl to the death! There can be live players as well as CPUs. Players can form alliances to attack certain players together. Stat changes when alliances are     formed. Last man standing takes home the Fantasy Brawl trophy. 
+   * Each character will have a set of powers, attributes, inventories, weapons, health, attacks, and skills.
+   * Players will roll dice to determine the moves they can make. Will input who they want to attack, or ally with.
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
 
 ### Navigation Diagram
