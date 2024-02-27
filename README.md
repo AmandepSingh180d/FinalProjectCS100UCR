@@ -6,11 +6,11 @@
   * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
     * We will use VS code to write our code and GitHub for version control. Our main language for the backend will be C++. Scrum patterns, user stories.
   * What will be the input/output of your project?
-   * Menu will ask how many people are playing or single-player mode, and whether or not there will be CPUs playing as well. Users will input their choice of character. Users can see character stats, inventory, and health. Console will output actions and/or damage after turns. As each player is eliminated console will output who defeated who. Console will output the last man standing as the winner. Will input who they want to attack, ally with, or other actions.
+    * Menu will ask how many people are playing or single-player mode, and whether or not there will be CPUs playing as well. Users will input their choice of character. Users can see character stats, inventory, and health. Console will output actions and/or damage after turns. As each player is eliminated console will output who defeated who. Console will output the last man standing as the winner. Will input who they want to attack, ally with, or other actions.
   * What are the features that the project provides?
-   * Multiplayer mode: Up to 6 characters will brawl to the death! There can be live players as well as CPUs. Players can form alliances to attack certain players together. Stat changes when alliances are     formed. Last man standing takes home the Fantasy Brawl trophy. 
-   * Each character will have a set of powers, attributes, inventories, weapons, health, attacks, and skills.
-   * Players will roll dice to determine the moves they can make. Will input who they want to attack, or ally with.
+    * Multiplayer mode: Up to 6 characters will brawl to the death! There can be live players as well as CPUs. Players can form alliances to attack certain players together. Stat changes when alliances are     formed. Last man standing takes home the Fantasy Brawl trophy. 
+    * Each character will have a set of powers, attributes, inventories, weapons, health, attacks, and skills.
+    * Players will roll dice to determine the moves they can make. Will input who they want to attack, or ally with.
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
 
 ### Navigation Diagram
@@ -66,28 +66,20 @@ The functionality of the project is largely based on the player management class
 The players will get to choose who they attack via text and may enter 1 to 4 (yes they can attack themselves), this will be done within the player management class in which they will be able to have an attack choice function. In terms of choices, the players will have four based on their dice roll. The first is the attack choice, which will list all the available attacks, updating the screen to show this. The attacks will be listed via a function within the player management class, but the damage will be calculated separately, relying on the checking of which type of character they are. This will then calculate the damage for a regular attack. The damage function will be incorporated within the player management class. These damage values will also be calculated by the random dice roll given to characters per each turn, through a separate function that is purely for randomized dice rolls. The second option that will occur will be an option to use a special attack. These attacks use special points but will do higher damage, and be class-based. This will be implemented within the attack function and will use the check special points function in order to check if the player has enough special points to use their attack, if not they will be prompted to either back out or choose a different attack, done from the menu class. The third option is to check inventory, in which the menu class will efficiently move toward the next scene, showing the players' inventory and enabling them to use buffs. If the buff is a defense up or attacks up, the attack function will have a check from the checkBuffs function in order to accommodate for this. The fourth option is a joke option, that lets you skip your turn and take damage. This option is to run, and you will be given text that states that you have fallen over and are being laughed at for running. In terms of measuring the stats, when any damage is taken or given through the damage function in playerManager, it will update in the stat manager class via a function, and will also be sent to the character object to update their health. This update will also be shown in real-time to the health and special points displayed within the menu class.
 
 At the end of the game, once there is only 1 character with health remaining, they will be rewarded with a victory screen, and the stat manager will provide this to the menu for it to be incorporated for every player. Then the players will be prompted to play again or quit. If they choose the option of quitting the program will end. If they choose to play again, everything will be reset, and be sent back to the title screen.
- 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
 
- 
+### Updated Class Diagram Notes
+
+We decided to first seperate our player manager class into multiple other classes. This change was required to make not only cleaner code, but to make testing smoother. With this update we are seperating the player manager class into the attack class, dice roll class, and choice class. This update helped us in providing stable features with proper testing for each of the features being used by the player manager class. The addition of the dice roll class was not only for simplicity, but also reusability so that every class may use this class wherever needed.
+
+Attack class will delegate any of the attacks based on the dice roll that is given. The main solid principle that was used here was single repsonsibility principle. Originally this was going to be a function within player manager but we realized that to improve efficiency and testability it would be advantageous to make a seperate class that dealt only with attacks. Calculations of attacks and damage that is given to players is dealt within this class. This change helped us improve on making the code easily testable and become bug free at an earlier state. This class deals with user input and character order selections. This increased the amount of code we had to develop, which allowed us to reuse it in many contexts and make it easier to test because it was only handling one task. As a result, flaws are discovered significantly sooner, enabling far more seamless implementation.
+
+Choice class will deal with all user inputs. The single responsibility principle was the primary principle applied in this case. This was originally intended to be a function of player manager, but we soon recognized that it would be better to create a separate class that dealt just with the player's selections in order to increase efficiency and testability. The user input and order choices of the characters are dealt within this class. This not only made us write code that was simpler, but in turn made the code reusable in multiple situations and made code that is easily testable as it is dealing with one responsibility. This subsequently helps find bugs much earlier on, which allows much smoother implementation.
+
+The menu class was updated to depend on the asbtractions shown above. This applies the dependency inverison principle to the menu class. This was applied through using abstractions of attack, choice, and statmanager classes from the player manager class. Rather than relying on the components within the player manager class, the menu class is reliant on the abstractions of the attack, choice, and stat manger classes that are used by player manager. This helped in writing code that is more testable and allowed us to have much better code maintainability, as it makes low-level modules that may cause problem easier to maintain and modify.
+
+With the character class and subsequent derived classes we applied the open-closed principle and Liskov substitution principle. The open-closed principle was applied as it enabled us to add classes in the future, while not needing to adjust the base class itself, while the liskov substitution principles was applied as the derived classes could easily be used instead of the character base class. This change helped in writing code that was not only reusable but made the code applicable to add any future classes. This also adds the ability to maintain these classes easier and to make testing much smoother.
+
+An additional note is that fixes were applied to the arrows of the derived subclasses and the associations were fixed within player manager.
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:
