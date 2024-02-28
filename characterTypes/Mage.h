@@ -16,14 +16,14 @@ class Mage: public Character {
 
     public:
         Mage();
-        virtual int getHealth();
-        virtual void setHealth(int);
-        virtual int getSpecialPoints();
-        virtual void setSpecialPoints(int);
+        virtual int getHealth() const;
+        virtual void setHealth(const int& newHealth);
+        virtual int getSpecialPoints() const;
+        virtual void setSpecialPoints(const int& newSP);
         virtual void setInventory();
-        virtual std::vector<std::string> getInventory();
+        virtual std::vector<std::string> getInventory() const;
         int randomizer();
-        virtual std::vector<std::string> getSpecialAttack();
+        virtual std::vector<std::string> getSpecialAttack() const;
 
 
 };

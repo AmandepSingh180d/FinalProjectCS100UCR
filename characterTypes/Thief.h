@@ -16,14 +16,14 @@ class Thief : public Character {
 
     public:
         Thief();
-        virtual int getHealth();
-        virtual void setHealth(int newHealth);
-        virtual int getSpecialPoints();
-        virtual void setSpecialPoints(int newSP);
-        virtual std::vector<std::string> getInventory();
+        virtual int getHealth() const;
+        virtual void setHealth(const int& newHealth);
+        virtual int getSpecialPoints() const;
+        virtual void setSpecialPoints(const int& newSP);
         virtual void setInventory();
+        virtual std::vector<std::string> getInventory() const;
         int randomizer();
-        virtual std::vector<std::string> getSpecialAttack();
+        virtual std::vector<std::string> getSpecialAttack() const;
 };
 
 #endif // THIEF_H

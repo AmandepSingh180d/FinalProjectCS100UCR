@@ -2,28 +2,31 @@
 #include <vector>
 #include <string>
 #include <random>
+#include <cstdlib>
+#include <ctime>
 #include "Mage.h"
 
 Mage::Mage() {
     this->health = 100;
     this->specialPoints = 20;
+    srand(time(nullptr));
     setInventory();
 }
 
-int Mage::getHealth() {
+int Mage::getHealth() const {
     return this->health;
 }
 
-void Mage::setHealth(int newHealth) {
+void Mage::setHealth(const int& newHealth) {
     this->health = newHealth;
 
 }
 
-int Mage::getSpecialPoints() {
+int Mage::getSpecialPoints() const{
     return this->specialPoints;
 }
 
-void Mage::setSpecialPoints(int newSP) {
+void Mage::setSpecialPoints(const int& newSP) {
     this->specialPoints = newSP;
 }
 
@@ -36,7 +39,7 @@ void Mage::setInventory() {
 
 }
 
-std::vector<std::string> Mage::getInventory() {
+std::vector<std::string> Mage::getInventory() const{
     return this->inventory;
 }
 
@@ -47,6 +50,6 @@ int Mage::randomizer() {
     
    
 
-std::vector<std::string> Mage::getSpecialAttack() {
+std::vector<std::string> Mage::getSpecialAttack() const {
     return this->SPAttackList;
 }

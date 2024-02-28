@@ -2,29 +2,32 @@
 #include <vector>
 #include <string>
 #include <random>
+#include <cstdlib>
+#include <ctime>
 #include "Knight.h"
 
 
 Knight::Knight() {
     this->health = 100;
     this->specialPoints = 20;
+    srand(time(nullptr));
     setInventory();
 }
 
-int Knight::getHealth() {
+int Knight::getHealth() const{
     return this->health;
 }
 
-void Knight::setHealth(int newHealth) {
+void Knight::setHealth(const int& newHealth) {
     this->health = newHealth;
 
 }
 
-int Knight::getSpecialPoints() {
+int Knight::getSpecialPoints() const{
     return this->specialPoints;
 }
 
-void Knight::setSpecialPoints(int newSP) {
+void Knight::setSpecialPoints(const int& newSP) {
     this->specialPoints = newSP;
 }
 
@@ -36,7 +39,7 @@ void Knight::setInventory() {
     }
 }
 
-std::vector<std::string> Knight::getInventory() {
+std::vector<std::string> Knight::getInventory() const{
     return this->inventory;
 }
 
@@ -45,6 +48,6 @@ int Knight::randomizer() {
     return randNum;
 }
 
-std::vector<std::string> Knight::getSpecialAttack() {
+std::vector<std::string> Knight::getSpecialAttack() const{
     return this->SPAttackList;
 }

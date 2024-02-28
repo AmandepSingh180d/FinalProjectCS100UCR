@@ -1,38 +1,42 @@
 #include <vector>
 #include <string>
 #include <random>
+#include <cstdlib>
+#include <ctime>
 #include "Thief.h"
         Thief::Thief(){
             this->health = 100;
             this->specialPoints = 20;
+            srand(time(nullptr));
             setInventory();
+            
         }
-        int Thief::getHealth(){
+        int Thief::getHealth() const{
             return this->health;
         }
-        void Thief::setHealth(int newHealth){
+        void Thief::setHealth(const int& newHealth){
             this->health = newHealth;
         }
-        int Thief::getSpecialPoints(){
+        int Thief::getSpecialPoints() const{
             return this->specialPoints;
         }
-        void Thief::setSpecialPoints(int newSP){
+        void Thief::setSpecialPoints(const int& newSP){
             this->specialPoints = newSP;
         }
-        std::vector<std::string> Thief::getInventory(){
+        std::vector<std::string> Thief::getInventory() const{
             return this->Inventory;
         }
         void Thief::setInventory(){
             for (int i = 0; i<3; i++){
                 int num=0;
                 num = randomizer();
-                inventory.push_back(listOfInventory.at(num));
+                Inventory.push_back(listOfInventory.at(num));
             }
         }
         int Thief::randomizer(){
            int randNum = rand() % listOfInventory.size();
            return randNum;
         }
-        std::vector<std::string> Thief::getSpecialAttack(){
+        std::vector<std::string> Thief::getSpecialAttack() const{
             return this->SPAttackList;
         }

@@ -16,9 +16,9 @@ class Character {
         virtual void setHealth(const int&) = 0;
         virtual int getSpecialPoints() const = 0;
         virtual void setSpecialPoints(const int&) = 0;
-        virtual void setInventory(vector<string>&) = 0;
+        virtual void setInventory() = 0;
         virtual vector<string> getInventory() const = 0;
-        virtual vector<string> specialAttack() const = 0;
+        virtual vector<string> getSpecialAttack() const = 0;
          
 };
 
