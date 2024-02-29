@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../attackTest/attack.h"
+#include "../attackPlayer/attack.h"
 
 //test the basicAttack method
 TEST(AttackTest, testBasicAttack){
