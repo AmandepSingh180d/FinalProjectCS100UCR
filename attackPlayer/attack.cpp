@@ -23,4 +23,5 @@ int Attack::specialAttack(int sp, int choice){
             default:
                 return 0;
             }
+    }
 }
