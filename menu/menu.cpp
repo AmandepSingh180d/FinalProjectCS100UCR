@@ -266,11 +266,11 @@ void Menu::menuTrophyCeremony(int playerWinner, int playerMageDMG, int playerArc
     std::cout<< "*           DMG:"<<playerMageDMG <<"             DMG:"<<playerArcherDMG <<"               DMG:"<<playerThiefDMG<<"               DMG:"<<playerKnightDMG<<"         *\n";//4
     std::cout<< "*                                                                                 *\n";//5
     std::cout<< "*                                ============                                     *\n";//6
-    std::cout<< "*                                 \  0  0  /                                      *\n";//7
-    std::cout<< "*                                  \   0  /                                       *\n";//8
-    std::cout<< "*                                   \ 0  /                                        *\n";//9
-    std::cout<< "*                                    \  /                                         *\n";//10
-    std::cout<< "*                                     \/                                          *\n";//11
+    std::cout<< "*                                 \\  0  0  /                                      *\n";//7
+    std::cout<< "*                                  \\   0  /                                       *\n";//8
+    std::cout<< "*                                   \\ 0  /                                        *\n";//9
+    std::cout<< "*                                    \\  /                                         *\n";//10
+    std::cout<< "*                                     \\/                                          *\n";//11
     std::cout<< "*                              Player "<<playerWinner<<"                                            *\n";//12
     std::cout<< "***********************************************************************************\n";//13
 }

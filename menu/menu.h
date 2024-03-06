@@ -56,6 +56,7 @@ class Menu : public Choice{
         void menuTitleScreen();
         int menuCharacterScreen(int playerNum);
         int menuBattleChoice(int playerAttack, int playerDefend, int diceRoll);
+        int chooseWhoAttack();
         //SP
         int menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll);
         int menuKnightSPChoice(int playerAttack, int playerDefend, int diceRoll);
