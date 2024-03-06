@@ -293,4 +293,4 @@ int Menu::playAgain(){
 }
 int Menu::chooseWhoAttack(){
     return playerChoice.chooseWhoToAttack();
-}
+}//system("clear")
