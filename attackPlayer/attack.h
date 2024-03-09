@@ -1,15 +1,14 @@
-#ifndef ARCHER_ATTACK_H
-#define ARCHER_ATTACK_H
+#ifndef ATTACK_H
+#define ATTACK_H
 
-#include "attack.h"
 
 class Attack {
 public:
     int basicAttack();
-    int specialAttack(int sp,int choice);
+    virtual int specialAttack(int sp,int choice, int dice) = 0;
 
 private:
     int sp;
 };
 
-#endif // ARCHER_ATTACK_H
+#endif // ATTACK_H
