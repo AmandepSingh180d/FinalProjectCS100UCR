@@ -47,14 +47,12 @@ void Menu::applyInvArcher(){
     archerInv1 = archerInv[0];
     archerInv2 = archerInv[1];
     archerInv3 = archerInv[2];
-    archerInv4 = archerInv[3];
 }
 void Menu::applyInvKnight(){
     std::vector<std::string> knightInv = myKnight.getInventory();
     knightInv1 = knightInv[0];
     knightInv2 = knightInv[1];
     knightInv3 = knightInv[2];
-    knightInv4 = knightInv[3];
 }
 
 void Menu::applyInvMage(){
@@ -62,7 +60,6 @@ void Menu::applyInvMage(){
     mageInv1 = mageInv[0];
     mageInv2 = mageInv[1];
     mageInv3 = mageInv[2];
-    mageInv4 = mageInv[3];
 }
 
 void Menu::applyInvThief(){
@@ -70,7 +67,6 @@ void Menu::applyInvThief(){
     thiefInv1 = thiefInv[0];
     thiefInv2 = thiefInv[1];
     thiefInv3 = thiefInv[2];
-    thiefInv4 = thiefInv[3];
 }
 
 void Menu::menuTitleScreen(){
@@ -211,8 +207,8 @@ int Menu::menuArcherInvChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<< archerInv1 <<"                                        "<< archerInv2 <<"                  *\n";//9
     std::cout<< "*          (1)                                                       (2)          *\n";//10
-    std::cout<< "*     "<< archerInv3 <<"                                        "<< archerInv4 <<"                  *\n";//11
-    std::cout<< "*          (3)                                                       (4)          *\n";//12
+    std::cout<< "*     "<< archerInv3 <<"                                                          *\n";//11
+    std::cout<< "*          (3)                                                                    *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.inventoryChoice();
 }
@@ -228,8 +224,8 @@ int Menu::menuKnightInvChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<knightInv1 <<"                                        "<<knightInv2 <<"                  *\n";//9
     std::cout<< "*          (1)                                                       (2)          *\n";//10
-    std::cout<< "*     "<<knightInv3 <<"                                        "<<knightInv4 <<"                  *\n";//11
-    std::cout<< "*          (3)                                                       (4)          *\n";//12
+    std::cout<< "*     "<<knightInv3 <<"                                                           *\n";//11
+    std::cout<< "*          (3)                                                                    *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.inventoryChoice();
 }
@@ -246,8 +242,8 @@ int Menu::menuMageInvChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<mageInv1 <<"                                        "<<mageInv2 <<"                  *\n";//9
     std::cout<< "*          (1)                                                       (2)          *\n";//10
-    std::cout<< "*     "<<mageInv3 <<"                                        "<<mageInv4 <<"                  *\n";//11
-    std::cout<< "*          (3)                                                       (4)          *\n";//12
+    std::cout<< "*     "<<mageInv3 <<"                                                             *\n";//11
+    std::cout<< "*          (3)                                                                    *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.inventoryChoice();
 }
@@ -264,8 +260,8 @@ int Menu::menuThiefInvChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<thiefInv1 <<"                                        "<<thiefInv2 <<"                  *\n";//9
     std::cout<< "*          (1)                                                       (2)          *\n";//10
-    std::cout<< "*     "<<thiefInv3 <<"                                        "<<thiefInv4 <<"                  *\n";//11
-    std::cout<< "*          (3)                                                       (4)          *\n";//12
+    std::cout<< "*     "<<thiefInv3 <<"                                                            *\n";//11
+    std::cout<< "*          (3)                                                                    *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.inventoryChoice();
 }

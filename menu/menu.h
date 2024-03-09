@@ -25,7 +25,6 @@ class Menu : public Choice{
         std::string archerInv1="";
         std::string archerInv2="";
         std::string archerInv3="";
-        std::string archerInv4="";
         //Knight SP attack and Inventory
         std::string knightSP1="";
         std::string knightSP2="";
@@ -33,7 +32,6 @@ class Menu : public Choice{
         std::string knightInv1="";
         std::string knightInv2="";
         std::string knightInv3="";
-        std::string knightInv4="";
         //Mage SP attack and Inventory
         std::string mageSP1="";
         std::string mageSP2="";
@@ -41,7 +39,6 @@ class Menu : public Choice{
         std::string mageInv1="";
         std::string mageInv2="";
         std::string mageInv3="";
-        std::string mageInv4="";
         //Thief SP attack and Inventory
         std::string thiefSP1="";
         std::string thiefSP2="";
@@ -49,7 +46,6 @@ class Menu : public Choice{
         std::string thiefInv1="";
         std::string thiefInv2="";
         std::string thiefInv3="";
-        std::string thiefInv4="";
 
     public:
         Menu(Archer& playArcher,Knight& playKnight,Mage& playMage, Thief& playThief);
