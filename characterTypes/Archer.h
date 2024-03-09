@@ -10,6 +10,7 @@ class Archer : public Character {
     private:
         int specialPoints;
         int health;
+        int playerOrderNum=0;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList = {"Arrow Barrage","Large Arrow","Explosive Arrow"};
         std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
@@ -24,6 +25,8 @@ class Archer : public Character {
         virtual std::vector<std::string> getInventory() const;
         int randomizer();
         virtual std::vector<std::string> getSpecialAttack() const;
+        void setplayerOrderNum(int);
+        int getplayerOrderNum();
 };
 
 #endif // ARCHER_H

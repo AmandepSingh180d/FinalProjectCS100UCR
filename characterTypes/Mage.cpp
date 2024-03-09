@@ -53,3 +53,10 @@ int Mage::randomizer() {
 std::vector<std::string> Mage::getSpecialAttack() const {
     return this->SPAttackList;
 }
+
+void Mage::setplayerOrderNum(int playerNum){
+    this->playerOrderNum=playerNum;
+}
+int Mage::getplayerOrderNum(){
+    return this->playerOrderNum;
+}

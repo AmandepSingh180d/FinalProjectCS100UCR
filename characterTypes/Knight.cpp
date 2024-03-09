@@ -51,3 +51,9 @@ int Knight::randomizer() {
 std::vector<std::string> Knight::getSpecialAttack() const{
     return this->SPAttackList;
 }
+void Knight::setplayerOrderNum(int playerNum){
+    this->playerOrderNum=playerNum;
+}
+int Knight::getplayerOrderNum(){
+    return this->playerOrderNum;
+}
