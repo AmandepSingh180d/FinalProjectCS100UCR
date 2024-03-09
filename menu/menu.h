@@ -14,10 +14,10 @@
 class Menu : public Choice{
     private:
         Choice playerChoice;
-        Archer myArcher;
-        Knight myKnight;
-        Mage myMage;
-        Thief myThief;
+        Archer* myArcher;
+        Knight* myKnight;
+        Mage* myMage;
+        Thief* myThief;
         //Archer SP attack and Inventory
         std::string archerSP1="";
         std::string archerSP2="";
@@ -48,7 +48,7 @@ class Menu : public Choice{
         std::string thiefInv3="";
 
     public:
-        Menu(Archer& playArcher,Knight& playKnight,Mage& playMage, Thief& playThief);
+        Menu(Archer* playArcher,Knight* playKnight,Mage* playMage, Thief* playThief);
         void menuTitleScreen();
         int menuCharacterScreen(int playerNum);
         int menuBattleChoice(int playerAttack, int playerDefend, int diceRoll);
