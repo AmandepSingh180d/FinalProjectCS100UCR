@@ -53,12 +53,12 @@ int Choice::specialAttackChoice() {
 }
 
 int Choice::inventoryChoice() {
-    cout << "\nChoose your item (a number 1-4):\n";
-    while(!(cin >> inventoryChoiceInput) || inventoryChoiceInput < 1 || inventoryChoiceInput > 4) {
+    cout << "\nChoose your item (a number 1-3):\n";
+    while(!(cin >> inventoryChoiceInput) || inventoryChoiceInput < 1 || inventoryChoiceInput > 3) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout << "Oops, that is not a valid item choice ";
-        cout << "Please enter a number between 1 and 4.\n";
+        cout << "Please enter a number between 1 and 3.\n";
     }
     return inventoryChoiceInput;
 }

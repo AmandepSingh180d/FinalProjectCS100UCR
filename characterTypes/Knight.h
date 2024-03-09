@@ -12,7 +12,7 @@ class Knight: public Character {
         int specialPoints;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList {"Horse Charge", "Double Slice", "Halberd Attack"};
-        std::vector<std::string> listOfInventory {"Shield", "Steak", "Stew", "Pistol", "SP Refill", "AttackUp"};
+        std::vector<std::string> listOfInventory {"Dagger", "Steak", "Stew", "Pistol", "SP Refill", "Small Potion"};
 
     public: 
         Knight();

@@ -12,7 +12,7 @@ class Archer : public Character {
         int health;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList = {"Arrow Barrage","Large Arrow","Explosive Arrow"};
-        std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
+        std::vector<std::string> listOfInventory = {"SP refill", "Crossbow Shot","Steak","Small Potion", "Stew","Long Bow"};
 
     public:
         Archer();

@@ -12,7 +12,7 @@ class Thief : public Character {
         int health;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList = {"3x Stab","Shin destroyer","Backstab"};
-        std::vector<std::string> listOfInventory = {"SP refill", "HealthUp","AtackUp","Small potion", "Stew","DefenseUp"};
+        std::vector<std::string> listOfInventory = {"SP refill", "HealthUp", "Dagger","Small potion", "Stew","Flash Bomb"};
 
     public:
         Thief();
