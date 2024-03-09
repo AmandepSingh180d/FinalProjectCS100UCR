@@ -20,60 +20,61 @@ Menu::Menu(Archer& playArcher,Knight& playKnight,Mage& playMage, Thief& playThie
 
 void Menu::applySPArcher(){
     std::vector<std::string> archerSPAttack = myArcher.getSpecialAttack();
-    archerSPAttack[0]=archerSP1;
-    archerSPAttack[1]=archerSP2;
-    archerSPAttack[2]=archerSP3;
+    archerSP1=archerSPAttack[0];
+    archerSP2=archerSPAttack[1];
+    archerSP3=archerSPAttack[2];
 }
 void Menu::applySPKnight(){
     std::vector<std::string> knightSPAttack = myKnight.getSpecialAttack();
-    knightSPAttack[0]=knightSP1;
-    knightSPAttack[1]=knightSP2;
-    knightSPAttack[2]=knightSP3;
+    knightSP1 = knightSPAttack[0];
+    knightSP2 = knightSPAttack[1];
+    knightSP3 = knightSPAttack[2];
 }
 void Menu::applySPMage(){
     std::vector<std::string> mageSPAttack = myMage.getSpecialAttack();
-    mageSPAttack[0] = mageSP1;
-    mageSPAttack[1] = mageSP2;
-    mageSPAttack[2] = mageSP3;
+    mageSP1 = mageSPAttack[0];
+    mageSP2 = mageSPAttack[1];
+    mageSP3 = mageSPAttack[2];
 }
 void Menu::applySPThief(){
     std::vector<std::string> thiefSPAttack = myThief.getSpecialAttack();
-    thiefSPAttack[0] = thiefSP1;
-    thiefSPAttack[1] = thiefSP2;
-    thiefSPAttack[2] = thiefSP3;
+    thiefSP1 = thiefSPAttack[0];
+    thiefSP2 = thiefSPAttack[1];
+    thiefSP3 = thiefSPAttack[2];
 }
 void Menu::applyInvArcher(){
     std::vector<std::string> archerInv = myArcher.getInventory();
-    archerInv[0] = archerInv1;
-    archerInv[1] = archerInv2;
-    archerInv[2] = archerInv3;
-    archerInv[3] = archerInv4;
+    archerInv1 = archerInv[0];
+    archerInv2 = archerInv[1];
+    archerInv3 = archerInv[2];
+    archerInv4 = archerInv[3];
 }
 void Menu::applyInvKnight(){
     std::vector<std::string> knightInv = myKnight.getInventory();
-    knightInv[0] = knightInv1;
-    knightInv[1] = knightInv2;
-    knightInv[2] = knightInv3;
-    knightInv[3] = knightInv4;
+    knightInv1 = knightInv[0];
+    knightInv2 = knightInv[1];
+    knightInv3 = knightInv[2];
+    knightInv4 = knightInv[3];
 }
 
 void Menu::applyInvMage(){
     std::vector<std::string> mageInv = myMage.getInventory();
-    mageInv[0] = mageInv1;
-    mageInv[1] = mageInv2;
-    mageInv[2] = mageInv3;
-    mageInv[3] = mageInv4;
+    mageInv1 = mageInv[0];
+    mageInv2 = mageInv[1];
+    mageInv3 = mageInv[2];
+    mageInv4 = mageInv[3];
 }
 
 void Menu::applyInvThief(){
     std::vector<std::string> thiefInv = myThief.getInventory();
-    thiefInv[0] = thiefInv1;
-    thiefInv[1] = thiefInv2;
-    thiefInv[2] = thiefInv3;
-    thiefInv[3] = thiefInv4;
+    thiefInv1 = thiefInv[0];
+    thiefInv2 = thiefInv[1];
+    thiefInv3 = thiefInv[2];
+    thiefInv4 = thiefInv[3];
 }
 
 void Menu::menuTitleScreen(){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*                                                                                 *\n";//2
     std::cout<< "*                                                                                 *\n";//3
@@ -92,6 +93,7 @@ void Menu::menuTitleScreen(){
 }
 
 int Menu::menuCharacterScreen(int playerNum){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*                                                                                 *\n";//2
     std::cout<< "*                                                                                 *\n";//3
@@ -109,6 +111,7 @@ int Menu::menuCharacterScreen(int playerNum){
 }
 
 int Menu::menuBattleChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -126,6 +129,7 @@ int Menu::menuBattleChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 //SPCHOICE
 int Menu::menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -142,6 +146,7 @@ int Menu::menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll){
     return playerChoice.specialAttackChoice();
 }
 int Menu::menuKnightSPChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -159,6 +164,7 @@ int Menu::menuKnightSPChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 
 int Menu::menuMageSPChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -176,6 +182,7 @@ int Menu::menuMageSPChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 
 int Menu::menuThiefSPChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -193,6 +200,7 @@ int Menu::menuThiefSPChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 //INVENTORY
 int Menu::menuArcherInvChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -209,6 +217,7 @@ int Menu::menuArcherInvChoice(int playerAttack, int playerDefend, int diceRoll){
     return playerChoice.inventoryChoice();
 }
 int Menu::menuKnightInvChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -226,6 +235,7 @@ int Menu::menuKnightInvChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 
 int Menu::menuMageInvChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -243,6 +253,7 @@ int Menu::menuMageInvChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 
 int Menu::menuThiefInvChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -260,6 +271,7 @@ int Menu::menuThiefInvChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 
 void Menu::menuTrophyCeremony(int playerWinner, int playerMageDMG, int playerArcherDMG, int playerThiefDMG, int playerKnightDMG){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
     std::cout<< "*           HP:"<<myMage.getHealth() <<"             HP:"<<myArcher.getHealth() <<"               HP:"<<myThief.getHealth()<<"               HP:"<<myKnight.getHealth()<<"         *\n";//3
@@ -276,6 +288,7 @@ void Menu::menuTrophyCeremony(int playerWinner, int playerMageDMG, int playerArc
 }
 
 int Menu::playAgain(){
+    system("cls"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*                                                                                 *\n";//2
     std::cout<< "*                                                                                 *\n";//3
