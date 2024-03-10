@@ -10,6 +10,7 @@ class Knight: public Character {
     private:
         int health;
         int specialPoints;
+        int playerRot =0;
         int playerOrderNum=0;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList {"Horse Charge", "Double Slice", "Halberd Attack"};
@@ -27,7 +28,8 @@ class Knight: public Character {
         virtual std::vector<std::string> getSpecialAttack() const;
         void setplayerOrderNum(int);
         int getplayerOrderNum();
-
+        void setPlayerRotation(int);
+        int getPlayerRotation();
 };
 
 

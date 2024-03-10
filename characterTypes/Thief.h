@@ -10,6 +10,7 @@ class Thief : public Character {
     private:
         int specialPoints;
         int health;
+        int playerRot=0;
         int playerOrderNum=0;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList = {"3x Stab","Shin destroyer","Backstab"};
@@ -27,6 +28,8 @@ class Thief : public Character {
         virtual std::vector<std::string> getSpecialAttack() const;
         void setplayerOrderNum(int);
         int getplayerOrderNum();
+        void setPlayerRotation(int);
+        int getPlayerRotation();
 };
 
 #endif // THIEF_H

@@ -57,3 +57,9 @@ void Knight::setplayerOrderNum(int playerNum){
 int Knight::getplayerOrderNum(){
     return this->playerOrderNum;
 }
+void Knight::setPlayerRotation(int pRot){
+    this->playerRot=pRot;
+}
+int Knight::getPlayerRotation(){
+    return this->playerRot;
+}
