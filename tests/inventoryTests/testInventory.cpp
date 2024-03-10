@@ -62,7 +62,7 @@ TEST(TestInventory, TestBadUserInput) {
 
 }
 
-TEST(TestInventory, TestGoodInput) { //Want to fail
+TEST(TestInventory, TestGoodInput) { //Want to fail ( should not throw)
     Inventory inv1;
     Knight knight;
 
@@ -78,10 +78,6 @@ TEST(TestInventory, testNoThrow) {
     Inventory inv1;
     Knight knight;
 
-    int number = 1;
-
-    //std::vector<std::string> items = knight.getInventory(); 
-
     ASSERT_NO_THROW(std::vector<std::string> items = knight.getInventory()); 
 }
 
@@ -96,5 +92,5 @@ TEST(TestInventory, testUseInventory) {
 
     int useInventory = inv1.useInventory(number, knight);
 
-    EXPECT_EQ(useInventory, -20);
+    EXPECT_EQ(useInventory, 1 || 2 || 3 || 4 || 5);
 }

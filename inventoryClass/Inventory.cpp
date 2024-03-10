@@ -6,86 +6,65 @@
 std::string Inventory::checkInventory(int& userChoice, Character& playerCharacter) {
     std::vector<std::string> characterInventory = playerCharacter.getInventory();
     
-    // for (int i = 0; i < characterInventory.size(); ++i) {
-    //     std::cout << characterInventory.at(i) << ", ";
-    // }
-    // std::cout << std::endl;
-
     return characterInventory.at(userChoice-1);
 }
 
-//testing output (Will not be here)
-void Inventory::printOut(Character& playerCharacter) {
-    std::vector<std::string> characterInventory = playerCharacter.getInventory();
-    std::cout << "Here is inventory:" << std::endl;
-
-    for (int i = 0; i < characterInventory.size(); ++i) {
-        std::cout << characterInventory.at(i) << ", ";
-    }
-    std::cout << std::endl;
-}
-
-// std::string Inventory::deleteInventory(int& userChoice, Character& playerCharacter) {
-//     //std::vector<std::string> characterInventory = playerCharacter.getInventory();
-//     //std::string itemToDelete = checkInventory(userChoice, playerCharacter);
-
-//     playerCharacter.at(userChoice) = "Not Available"; 
-//     //DOES NOT PROPERLY MODIFY ONLY CHANGES CHARACterinventory
-//     return playerCharacter;
-// }
 
 int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
     std::string item = checkInventory(userChoice, playerCharacter);
 
+    // 1 for healing items 
     if ( item == "Stew") {
-        return 20;
+        return 1;
     }
 
+    // 2 for better healing items
     if (item == "Medium Potion") {
-        return 40;
+        return 2;
     }
-
+    // 5 for attack items 
     else if (item == "Dagger") {
-        return -20;
+        return 5;
     }
     
     else if(item == "Steak") {
-        return 30;
+        return 1;
     } 
     
     else if (item =="Pistol") {
-        return -30;
+        return 5;
     }
-
+    //3 for sp items
     else if (item == "SP Refill") {
-        return 10;
+        return 3;
     }
 
+    //4 for greater sp items 
     else if (item == "Greater SP Refill") {
-        return 20;
+        return 4;
     }
     
     else if(item == "Small Potion") {
-        return 25;
+        return 1;
     }
 
     else if (item == "Crossbow Shot") {
-         return -20;
+         return 5;
     }
 
     else if (item == "Long Bow")  {
-        return -30;
+        return 5;
     }
     else if (item == "Flash Bomb") {
-        return -30;
+        return 5;
     }
 
     else if (item == "Harm Potion") {
-        return -20;
+        return 5;
     }
 
     else if (item == "Blast Wand") {
-        return -25;
+        return 5;
     }
 
     else {
@@ -95,8 +74,5 @@ int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
     
 }
 
-// void Inventory::healthItem(int& number, Character& ) {
-
-// }
 
 

@@ -19,14 +19,7 @@ class Inventory {
     public: 
 
     std::string checkInventory(int& userChoice, Character& playerCharacter);
-    //std::string deleteInventory(int& userChoice, Character& playerCharacter);
     int useInventory(int& userChoice, Character& playerCharacter);
-    void printOut(Character& playerCharacter);
-
-    // void healthItem(int& number,  Character& playerCharacter);
-    // void spItem(int& number);
-    // void attackItem(int& number);
- 
 
 };  
 
