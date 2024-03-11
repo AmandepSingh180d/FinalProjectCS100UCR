@@ -149,16 +149,6 @@ void PlayerManager::battle(){
     setPlayerCharChoice(4,charChoice);
     //setting order
     setOrder();
-    
-    std::cout << pMage->getPlayerRotation() << "\n";
-    std::cout << pKnight->getPlayerRotation() << "\n";
-    std::cout << pThief->getPlayerRotation() << "\n";
-    std::cout << pArcher->getPlayerRotation() << "\n";
-    std::cout << pMage->getplayerOrderNum() << "\n";
-    std::cout << pKnight->getplayerOrderNum() << "\n";
-    std::cout << pThief->getplayerOrderNum() << "\n";
-    std::cout << pArcher->getplayerOrderNum() << "\n";
-
     //loop
     int order=0;
     while(end!=true){
@@ -294,4 +284,5 @@ int PlayerManager::findWinner(){
     else if(pThief->getHealth()!=0){
         return pThief->getplayerOrderNum();
     }
+    return 0;
 }
