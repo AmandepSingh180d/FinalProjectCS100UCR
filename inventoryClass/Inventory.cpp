@@ -48,6 +48,10 @@ int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
         return 1;
     }
 
+    else if(item == "HealthUp") {
+        return 2;
+    }
+
     else if (item == "Crossbow Shot") {
          return 5;
     }
