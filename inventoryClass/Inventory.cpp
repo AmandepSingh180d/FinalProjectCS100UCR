@@ -32,7 +32,7 @@ int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
     } 
     
     else if (item =="Pistol") {
-        return 5;
+        return 6;
     }
     //3 for sp items
     else if (item == "SP Refill") {
@@ -53,10 +53,10 @@ int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
     }
 
     else if (item == "Long Bow")  {
-        return 5;
+        return 6;
     }
     else if (item == "Flash Bomb") {
-        return 5;
+        return 6;
     }
 
     else if (item == "Harm Potion") {
@@ -64,7 +64,7 @@ int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
     }
 
     else if (item == "Blast Wand") {
-        return 5;
+        return 6;
     }
 
     else {
