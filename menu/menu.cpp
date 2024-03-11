@@ -281,26 +281,24 @@ void Menu::menuTrophyCeremony(int playerWinner, int playerMageDMG, int playerArc
     std::cout<< "*                                     \\/                                          *\n";//11
     std::cout<< "*                              Player "<<playerWinner<<"  wins                                     *\n";//12
     std::cout<< "***********************************************************************************\n";//13
-    std::string tempExitVal = "";
-    std::getline(std::cin, tempExitVal);
 }
 
-int Menu::playAgain(){
+void Menu::playAgain(){
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*                                                                                 *\n";//2
     std::cout<< "*                                                                                 *\n";//3
     std::cout<< "*                                                                                 *\n";//4
     std::cout<< "*                                                                                 *\n";//5
-    std::cout<< "*                                 PLAY AGAIN???                                   *\n";//6
+    std::cout<< "*                             Thank YOU  for Playing!!!                           *\n";//6
     std::cout<< "*                                                                                 *\n";//7
-    std::cout<< "*                            YES:)               NO:(                             *\n";//8
-    std::cout<< "*                            (1)                 (2)                              *\n";//9
+    std::cout<< "*                                                                                 *\n";//8
+    std::cout<< "*                                                                                 *\n";//9
     std::cout<< "*                                                                                 *\n";//10
     std::cout<< "*                                                                                 *\n";//11
     std::cout<< "*                                                                                 *\n";//12
     std::cout<< "***********************************************************************************\n";//13
-    return playerChoice.endGameChoice();
 }
-int Menu::chooseWhoAttack(){
+int Menu::chooseWhoAttack(int pNum){
+    std::cout << "Player " << pNum << "\n";
     return playerChoice.chooseWhoToAttack();
 }//system("clear")
