@@ -52,7 +52,7 @@ class Menu : public Choice{
         void menuTitleScreen();
         int menuCharacterScreen(int playerNum);
         int menuBattleChoice(int playerAttack, int playerDefend, int diceRoll);
-        int chooseWhoAttack();
+        int chooseWhoAttack(int playerNum);
         //SP
         int menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll);
         int menuKnightSPChoice(int playerAttack, int playerDefend, int diceRoll);
@@ -65,7 +65,7 @@ class Menu : public Choice{
         int menuThiefInvChoice(int playerAttack, int playerDefend, int diceRoll);
         //Int end
         void menuTrophyCeremony(int playerWinner, int player1DMG, int player2DMG, int player3DMG, int player4DMG);
-        int playAgain();
+        void playAgain();
         //Declarations
         void applySPArcher();
         void applyInvArcher();
