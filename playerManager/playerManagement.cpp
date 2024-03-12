@@ -19,13 +19,13 @@ void PlayerManagement::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.basicAttack();
         }
         else if (atkType == 2){
-            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), atkType - 1, 10);
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 1, 10);
         }
         else if (atkType == 3){
-            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), atkType - 2, 10);
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 2, 10);
         }
         else if (atkType == 4){
-            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), atkType - 3, 10);
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 3, 10);
         }
     }
 
@@ -35,13 +35,13 @@ void PlayerManagement::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.basicAttack();
         }
         else if (atkType == 2){
-            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), atkType - 1, 10);
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 1, 10);
         }
         else if (atkType == 3){
-            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), atkType - 2, 10);
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 2, 10);
         }
         else if (atkType == 4){
-            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), atkType - 3, 10);
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 3, 10);
         }
     }
 
@@ -51,13 +51,13 @@ void PlayerManagement::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.basicAttack();
         }
         else if (atkType == 2){
-            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), atkType - 1, 10);
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 1, 10);
         }
         else if (atkType == 3){
-            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), atkType - 2, 10);
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 2, 10);
         }
         else if (atkType == 4){
-            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), atkType - 3, 10);
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 3, 10);
         }
     }
 
@@ -67,13 +67,13 @@ void PlayerManagement::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.basicAttack();
         }
         else if (atkType == 2){
-            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), atkType - 1, 10);
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 1, 10);
         }
         else if (atkType == 3){
-            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), atkType - 2, 10);
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 2, 10);
         }
         else if (atkType == 4){
-            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), atkType - 3, 10);
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 3, 10);
         }
     }
 
