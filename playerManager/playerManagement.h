@@ -48,6 +48,7 @@ class PlayerManager {
         int invChoice=0;
         Menu menu;
     public:
+        void applyDamage(int playerNum, int dmg);
         PlayerManager();
         void battle();
         void endCheck();
