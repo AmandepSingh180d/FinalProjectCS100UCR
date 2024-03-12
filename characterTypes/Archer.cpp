@@ -39,3 +39,15 @@
         std::vector<std::string> Archer::getSpecialAttack() const{
             return this->SPAttackList;
         }
+        void Archer::setplayerOrderNum(int playerNum){
+            this->playerOrderNum=playerNum;
+        }
+        int Archer::getplayerOrderNum(){
+            return this->playerOrderNum;
+        }
+        void Archer::setPlayerRotation(int pRot){
+            this->playerRot=pRot;
+        }
+        int Archer::getPlayerRotation(){
+            return this->playerRot;
+        }

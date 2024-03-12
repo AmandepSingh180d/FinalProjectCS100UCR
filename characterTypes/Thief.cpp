@@ -40,3 +40,16 @@
         std::vector<std::string> Thief::getSpecialAttack() const{
             return this->SPAttackList;
         }
+        
+        void Thief::setplayerOrderNum(int playerNum){
+            this->playerOrderNum=playerNum;
+        }
+        int Thief::getplayerOrderNum(){
+            return this->playerOrderNum;
+        }
+        void Thief::setPlayerRotation(int pRot){
+            this->playerRot=pRot;
+        }
+        int Thief::getPlayerRotation(){
+            return this->playerRot;
+        }

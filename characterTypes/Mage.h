@@ -10,6 +10,8 @@ class Mage: public Character {
     private: 
         int health ;
         int specialPoints;
+        int playerRot =0;
+        int playerOrderNum=0;
         std::vector<std::string> Inventory;
         std::vector<std::string> SPAttackList {"Fireball Barrage", "Lightning Shot", "Draco Meteor"};
         std::vector<std::string> listOfInventory {"Medium Potion", "Harm Potion", "Small Potion", "Blast Wand", "SP Refill", "Greater SP Refill"};
@@ -24,7 +26,10 @@ class Mage: public Character {
         virtual std::vector<std::string> getInventory() const;
         int randomizer();
         virtual std::vector<std::string> getSpecialAttack() const;
-
+        void setplayerOrderNum(int);
+        int getplayerOrderNum();
+        void setPlayerRotation(int);
+        int getPlayerRotation();
 
 };
 

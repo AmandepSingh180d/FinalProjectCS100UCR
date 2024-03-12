@@ -1,0 +1,4 @@
+googletest_build
+lib/
+characterTests
+bin/

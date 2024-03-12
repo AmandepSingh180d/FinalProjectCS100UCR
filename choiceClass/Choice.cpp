@@ -16,7 +16,6 @@ Choice::Choice() {
 }
 
 int Choice::actionChoice() {
-    int actionChoiceInput;
     cout << "\nPlease enter your action choice (a number 1-4)\n";
     while(!(cin>> actionChoiceInput) || actionChoiceInput < 1 || actionChoiceInput > 4) {
         cin.clear();
@@ -28,7 +27,6 @@ int Choice::actionChoice() {
 }
 
 int Choice::chooseWhoToAttack() {
-    int whoAttackInput;
     cout << "\nPlease choose the player you want to attack (player number 1-4)\n";
     cout << "Do not enter your own player number\n";
     while(!(cin>> whoAttackInput) || whoAttackInput < 1 || whoAttackInput > 4) {
@@ -41,7 +39,6 @@ int Choice::chooseWhoToAttack() {
 }
 
 int Choice::specialAttackChoice() {
-    int attackChoiceInput;
     cout << "\nPlease enter your special attack choice (a number 1-3)\n";
     while(!(cin >> attackChoiceInput) || attackChoiceInput < 1 || attackChoiceInput > 3) {
         cin.clear();
