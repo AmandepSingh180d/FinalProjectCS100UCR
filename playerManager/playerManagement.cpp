@@ -108,6 +108,7 @@ PlayerManager::PlayerManager(): menu(pArcher, pKnight, pMage, pThief){
     battle();
 }
 void PlayerManager::callBattleArcher(){
+    menu.clearBattleMenu();
     pAttack = pArcher->getplayerOrderNum(); // Change from pMage to pArcher
     pDefend = menu.chooseWhoAttack(pAttack);
     pDice = rollDice.rollDice();
@@ -142,7 +143,8 @@ void PlayerManager::callBattleArcher(){
 
 }
 void PlayerManager::callBattleKnight(){
-    pAttack = pKnight->getplayerOrderNum(); // Change from pArcher to pKnight
+    menu.clearBattleMenu();
+    pAttack = pKnight->getplayerOrderNum(); // Change from pMage to pArcher
     pDefend = menu.chooseWhoAttack(pAttack);
     pDice = rollDice.rollDice();
     actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
@@ -177,7 +179,8 @@ void PlayerManager::callBattleKnight(){
 
 }
 void PlayerManager::callBattleThief(){
-    pAttack = pThief->getplayerOrderNum(); // Change from pArcher to pThief
+    menu.clearBattleMenu();
+    pAttack = pThief->getplayerOrderNum(); // Change from pMage to pArcher
     pDefend = menu.chooseWhoAttack(pAttack);
     pDice = rollDice.rollDice();
     actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
@@ -212,10 +215,12 @@ void PlayerManager::callBattleThief(){
 }
 
 void PlayerManager::callBattleMage(){
-    pAttack=pMage->getplayerOrderNum();
-    pDefend=menu.chooseWhoAttack(pAttack);
-    pDice=rollDice.rollDice();
+    menu.clearBattleMenu();
+    pAttack = pMage->getplayerOrderNum(); // Change from pMage to pArcher
+    pDefend = menu.chooseWhoAttack(pAttack);
+    pDice = rollDice.rollDice();
     actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
+    
     if(actionChoice==1){
         //callAttack();
         callAttack(1, pAttack, pDefend);
@@ -315,13 +320,13 @@ void PlayerManager::setPlayerCharChoice(int userNum, int charChoice){
         pMage->setplayerOrderNum(userNum);
     }
     else if(charChoice==2){
-        pKnight->setplayerOrderNum(userNum);
+        pArcher->setplayerOrderNum(userNum);
     }
     else if(charChoice==3){
         pThief->setplayerOrderNum(userNum);
     }
     else if(charChoice==4){
-        pArcher->setplayerOrderNum(userNum);
+        pKnight->setplayerOrderNum(userNum);
     }
 }
 

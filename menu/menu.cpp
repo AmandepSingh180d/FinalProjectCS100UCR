@@ -110,7 +110,7 @@ int Menu::menuCharacterScreen(int playerNum){
 int Menu::menuBattleChoice(int playerAttack, int playerDefend, int diceRoll){
     system("clear"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
-    std::cout<< "*            Mage            Archer             Thief            Knight           *\n";//2
+    std::cout<< "*            Mage["<<myMage->getplayerOrderNum()<<"]         Archer["<<myArcher->getplayerOrderNum()<<"]          Thief["<<myThief->getplayerOrderNum()<<"]         Knight["<<myKnight->getplayerOrderNum()<<"]        *\n";//2
     std::cout<< "*           HP:"<<myMage->getHealth() <<"          HP:"<<myArcher->getHealth() <<"              HP:"<<myThief->getHealth()<<"          HP:"<<myKnight->getHealth()<<"            *\n";//3
     std::cout<< "*           SP:"<<myMage->getSpecialPoints() <<"           SP:"<<myArcher->getSpecialPoints() <<"               SP:"<<myThief->getSpecialPoints()<<"           SP:"<<myKnight->getSpecialPoints()<<"             *\n";//4
     std::cout<< "*                                                                                 *\n";//5
@@ -125,6 +125,22 @@ int Menu::menuBattleChoice(int playerAttack, int playerDefend, int diceRoll){
     return playerChoice.actionChoice();
 }
 
+void Menu::clearBattleMenu(){
+    system("clear"); //Clears terminal screen
+    std::cout<< "***********************************************************************************\n";//1
+    std::cout<< "*            Mage["<<myMage->getplayerOrderNum()<<"]         Archer["<<myArcher->getplayerOrderNum()<<"]          Thief["<<myThief->getplayerOrderNum()<<"]         Knight["<<myKnight->getplayerOrderNum()<<"]        *\n";//2
+    std::cout<< "*           HP:"<<myMage->getHealth() <<"          HP:"<<myArcher->getHealth() <<"              HP:"<<myThief->getHealth()<<"          HP:"<<myKnight->getHealth()<<"            *\n";//3
+    std::cout<< "*           SP:"<<myMage->getSpecialPoints() <<"           SP:"<<myArcher->getSpecialPoints() <<"               SP:"<<myThief->getSpecialPoints()<<"           SP:"<<myKnight->getSpecialPoints()<<"             *\n";//4
+    std::cout<< "*                                                                                 *\n";//5
+    std::cout<< "*                                                                                 *\n";//6
+    std::cout<< "*                                                                                 *\n";//7
+    std::cout<< "*                                                                                 *\n";//8
+    std::cout<< "*                                                                                 *\n";//9
+    std::cout<< "*                                                                                 *\n";//10
+    std::cout<< "*                                                                                 *\n";//11
+    std::cout<< "*                                                                                 *\n";//12
+    std::cout<< "***********************************************************************************\n";//13 
+}
 /*
 void Menu::findCharChoice(int p1,int p2, int p3,int p4){
     if(p1 == 1){
