@@ -3,6 +3,91 @@
 #include <random>
 #include <vector>
 
+void PlayerManagement::callAttack(int atkType, int pNum, int atkPNum){
+    int dmgNum = 0;
+    int spNum = 0;
+    //for mage
+    if(pNum == pMage->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 1, pDice);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 2, pDice);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 3, pDice);
+        }
+    }
+
+    //for archer
+    else if(pNum == pArcher->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 1, pDice);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 2, pDice);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 3, pDice);
+        }
+    }
+
+    //for knight
+    else if(pNum == pKnight->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 1, pDice);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 2, pDice);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 3, pDice);
+        }
+    }
+
+    //for thief
+    else if(pNum == pThief->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 1, pDice);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 2, pDice);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 3, pDice);
+        }
+    }
+
+    //apply sp damage
+    applyDamage(atkPNum, dmgNum);
+}
+
+void PlayerManagement::applyDamage(int pNum, int dmg){
+    if(pNum == pMage->getplayerOrderNum()){
+        pMage->setHealth(pMage->getHealth() - dmg);
+    }
+    else if(pNum == pArcher->getplayerOrderNum()){
+        pArcher->setHealth(pArcher->getHealth() - dmg);
+    }
+    else if(pNum == pKnight->getplayerOrderNum()){
+        pKnight->setHealth(pKnight->getHealth() - dmg);
+    }
+    else if(pNum == pThief->getplayerOrderNum()){
+        pThief->setHealth(pThief->getHealth() - dmg);
+    }
+
 PlayerManager::PlayerManager(): menu(pArcher, pKnight, pMage, pThief){
     battle();
 }
