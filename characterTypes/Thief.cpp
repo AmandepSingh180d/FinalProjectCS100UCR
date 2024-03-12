@@ -47,3 +47,9 @@
         int Thief::getplayerOrderNum(){
             return this->playerOrderNum;
         }
+        void Thief::setPlayerRotation(int pRot){
+            this->playerRot=pRot;
+        }
+        int Thief::getPlayerRotation(){
+            return this->playerRot;
+        }

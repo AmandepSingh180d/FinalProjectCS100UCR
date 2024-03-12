@@ -60,3 +60,9 @@ void Mage::setplayerOrderNum(int playerNum){
 int Mage::getplayerOrderNum(){
     return this->playerOrderNum;
 }
+void Mage::setPlayerRotation(int pRot){
+    this->playerRot=pRot;
+}
+int Mage::getPlayerRotation(){
+    return this->playerRot;
+}

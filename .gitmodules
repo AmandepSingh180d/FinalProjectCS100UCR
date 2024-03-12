@@ -1,0 +1,3 @@
+[submodule "statManagerClass/googletest"]
+	path = statManagerClass/googletest
+	url = https://github.com/google/googletest.git
