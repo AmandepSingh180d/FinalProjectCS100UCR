@@ -10,6 +10,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     if(pNum == pMage->getplayerOrderNum()){
         if (atkType == 1){
             dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 1, pDice);
@@ -26,6 +27,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     else if(pNum == pArcher->getplayerOrderNum()){
         if (atkType == 1){
             dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 1, pDice);
@@ -42,6 +44,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     else if(pNum == pKnight->getplayerOrderNum()){
         if (atkType == 1){
             dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 1, pDice);
@@ -58,6 +61,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     else if(pNum == pThief->getplayerOrderNum()){
         if (atkType == 1){
             dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 1, pDice);
