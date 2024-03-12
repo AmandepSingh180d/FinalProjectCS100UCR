@@ -13,6 +13,7 @@
 #include "../attackPlayer/knightAttack.h"
 #include "../attackPlayer/mageAttack.h"
 #include "../attackPlayer/thiefAttack.h"
+#include "../inventoryClass/Inventory.h"
 //Character inventory
 
 //Dice Roll
@@ -31,6 +32,7 @@ class PlayerManager {
         knightAttack kAtk;
         thiefAttack tAtk;       
         DiceRoll rollDice;
+        Inventory inventory;
         std::vector<int> initVectOrder;
         bool end = false;
         bool p1Dead=false;
@@ -58,6 +60,7 @@ class PlayerManager {
         void callBattleKnight();
         void callBattleArcher();
         int findWinner();
+        void itemUse(int itemNumber, Character* character );
 };
 
 #endif // PLAYERMANAGER_H
