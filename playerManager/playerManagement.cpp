@@ -337,14 +337,12 @@ void PlayerManager::itemUse(int itemNumber, Character* character) {
         std::cout << "Player Used Smaller Heal" << std::endl;
        // std::cout << "Player " << character->getplayerOrderNum() << "used " <<   
         character->setHealth(newHealth);
-        menu.menuBattleChoice(pAttack, pDefend, pDice);
     }
 
     else if (itemNumber == 2) {
         std::cout << "Player Used Better Heal" << std::endl;
         int newHealth = character->getHealth() + 30;
         character->setHealth(newHealth);
-        menu.menuBattleChoice(pAttack, pDefend, pDice);
 
     }
 
@@ -352,7 +350,6 @@ void PlayerManager::itemUse(int itemNumber, Character* character) {
         std::cout << "Player Used SP Refill" << std::endl;
         int newSP = character->getSpecialPoints() + 5;
         character->setSpecialPoints(newSP);
-        menu.menuBattleChoice(pAttack, pDefend, pDice);
     } 
 
     else if (itemNumber == 4) {
