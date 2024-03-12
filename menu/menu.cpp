@@ -121,9 +121,65 @@ int Menu::menuBattleChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*    Attack(1)[10 DAMAGE]                                    Special Attack(2)    *\n";//10
     std::cout<< "*                                                                                 *\n";//11
     std::cout<< "*    Inventory(3)                                            Run(4)               *\n";//12
-    std::cout<< "***********************************************************************************\n";//13
+    std::cout<< "***********************************************************************************\n";//13 
     return playerChoice.actionChoice();
 }
+
+/*
+void Menu::findCharChoice(int p1,int p2, int p3,int p4){
+    if(p1 == 1){
+        pMage=1;
+    }
+    else if(p1==2){
+        pArcher=1;
+    }
+    else if(p1==3){
+        pThief=1;
+    }
+    else if(p1==4){
+        pKnight=1;
+    }
+    //p2
+    if(p2 == 1){
+        pMage=2;
+    }
+    else if(p2==2){
+        pArcher=2;
+    }
+    else if(p2==3){
+        pThief=2;
+    }
+    else if(p2==4){
+        pKnight=2;
+    }
+    //p3
+    if(p3 == 1){
+        pMage=3;
+    }
+    else if(p3==2){
+        pArcher=3;
+    }
+    else if(p3==3){
+        pThief=3;
+    }
+    else if(p3==4){
+        pKnight=3;
+    }
+    //p4
+    if(p4 == 1){
+        pMage=4;
+    }
+    else if(p3==2){
+        pArcher=4;
+    }
+    else if(p3==3){
+        pThief=4;
+    }
+    else if(p3==4){
+        pKnight=4;
+    }
+}
+*/
 //SPCHOICE
 int Menu::menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll){
     system("clear"); //Clears terminal screen
@@ -136,9 +192,9 @@ int Menu::menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*   Player "<<playerAttack <<" rolled a "<<diceRoll<<" attacking player "<<playerDefend<<"                                       *\n";//7
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<archerSP1<<"(1)                                 "<<archerSP2<<"(2)             *\n";//9
-    std::cout<< "*    [SP:5 20 DAMAGE]                                  [SP:5 20 DAMAGE]           *\n";//10
+    std::cout<< "*    [SP:5 20 DAMAGE]                                  [SP:10 30 DAMAGE]          *\n";//10
     std::cout<< "*     "<<archerSP3<<"(3)                                                          *\n";//11
-    std::cout<< "*    [SP:20 40 DAMAGE]                                                            *\n";//12
+    std::cout<< "*    [SP:15 40 DAMAGE]                                                            *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.specialAttackChoice();
 }
@@ -153,9 +209,9 @@ int Menu::menuKnightSPChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*   Player "<<playerAttack <<" rolled a "<<diceRoll<<" attacking player "<<playerDefend<<"                                       *\n";//7
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<knightSP1<<"(1)                                  "<<knightSP2<<"(2)            *\n";//9
-    std::cout<< "*    [SP:5 20 DAMAGE]                                  [SP:5 20 DAMAGE]           *\n";//10
+    std::cout<< "*    [SP:5 20 DAMAGE]                                  [SP:10 30 DAMAGE]          *\n";//10
     std::cout<< "*     "<<knightSP3<<"(3)                                                           *\n";//11
-    std::cout<< "*    [SP:20 40 DAMAGE]                                                            *\n";//12
+    std::cout<< "*    [SP:15 40 DAMAGE]                                                            *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.specialAttackChoice();
 }
@@ -171,9 +227,9 @@ int Menu::menuMageSPChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*   Player "<<playerAttack <<" rolled a "<<diceRoll<<" attacking player "<<playerDefend<<"                                       *\n";//7
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<mageSP1<<"(1)                                    "<<mageSP2<<"(2)    *\n";//9
-    std::cout<< "*    [SP:5 20 DAMAGE]                                         [SP:5 20 DAMAGE]    *\n";//10
+    std::cout<< "*    [SP:5 20 DAMAGE]                                  [SP:10 30 DAMAGE]          *\n";//10
     std::cout<< "*     "<<mageSP3<<"(3)                                                             *\n";//11
-    std::cout<< "*    [SP:20 40 DAMAGE]                                                            *\n";//12
+    std::cout<< "*    [SP:15 40 DAMAGE]                                                            *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.specialAttackChoice();
 }
@@ -189,9 +245,9 @@ int Menu::menuThiefSPChoice(int playerAttack, int playerDefend, int diceRoll){
     std::cout<< "*   Player "<<playerAttack <<" rolled a "<<diceRoll<<" attacking player "<<playerDefend<<"                                       *\n";//8
     std::cout<< "*                                                                                 *\n";//8
     std::cout<< "*     "<<thiefSP1<<"(1)                                    "<<thiefSP2<<"(2)             *\n";//9
-    std::cout<< "*    [SP:5 20 DAMAGE]                               [SP:5 20 DAMAGE]              *\n";//10
+    std::cout<< "*    [SP:5 20 DAMAGE]                                  [SP:10 30 DAMAGE]          *\n";//10
     std::cout<< "*     "<<thiefSP3<<"(3)                                                                 *\n";//11
-    std::cout<< "*    [SP:20 40 DAMAGE]                                                            *\n";//12
+    std::cout<< "*    [SP:15 40 DAMAGE]                                                            *\n";//12
     std::cout<< "***********************************************************************************\n";//13
     return playerChoice.specialAttackChoice();
 }

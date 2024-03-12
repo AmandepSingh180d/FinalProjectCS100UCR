@@ -46,6 +46,11 @@ class Menu : public Choice{
         std::string thiefInv1="";
         std::string thiefInv2="";
         std::string thiefInv3="";
+        //setting players
+        int pMage=0;
+        int pArcher=0;
+        int pKnight =0;
+        int pThief=0;
 
     public:
         Menu(Archer* playArcher,Knight* playKnight,Mage* playMage, Thief* playThief);
@@ -53,6 +58,7 @@ class Menu : public Choice{
         int menuCharacterScreen(int playerNum);
         int menuBattleChoice(int playerAttack, int playerDefend, int diceRoll);
         int chooseWhoAttack(int playerNum);
+        //void findCharChoice(int p1,int p2, int p3,int p4);
         //SP
         int menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll);
         int menuKnightSPChoice(int playerAttack, int playerDefend, int diceRoll);
