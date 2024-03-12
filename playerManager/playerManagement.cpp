@@ -14,12 +14,15 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 1, pDice);
+            pMage->setSpecialPoints(pMage->getSpecialPoints()-5);
         }
         else if (atkType == 3){
             dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 2, pDice);
+            pMage->setSpecialPoints(pMage->getSpecialPoints()-10);
         }
         else if (atkType == 4){
             dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 3, pDice);
+            pMage->setSpecialPoints(pMage->getSpecialPoints()-15);
         }
     }
 
@@ -31,12 +34,15 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 1, pDice);
+            pArcher->setSpecialPoints(pArcher->getSpecialPoints()-5);
         }
         else if (atkType == 3){
             dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 2, pDice);
+            pArcher->setSpecialPoints(pArcher->getSpecialPoints()-10);
         }
         else if (atkType == 4){
             dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 3, pDice);
+            pArcher->setSpecialPoints(pArcher->getSpecialPoints()-15);
         }
     }
 
@@ -48,12 +54,15 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 1, pDice);
+            pKnight->setSpecialPoints(pKnight->getSpecialPoints()-5);
         }
         else if (atkType == 3){
             dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 2, pDice);
+            pKnight->setSpecialPoints(pKnight->getSpecialPoints()-10);
         }
         else if (atkType == 4){
             dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 3, pDice);
+            pKnight->setSpecialPoints(pKnight->getSpecialPoints()-15);
         }
     }
 
@@ -65,12 +74,15 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
         }
         else if (atkType == 2){
             dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 1, pDice);
+            pThief->setSpecialPoints(pThief->getSpecialPoints()-5);
         }
         else if (atkType == 3){
             dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 2, pDice);
+            pThief->setSpecialPoints(pThief->getSpecialPoints()-10);
         }
         else if (atkType == 4){
             dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 3, pDice);
+            pThief->setSpecialPoints(pThief->getSpecialPoints()-15);
         }
     }
 
