@@ -16,6 +16,7 @@ class Archer : public Character {
         std::vector<std::string> SPAttackList = {"Arrow Barrage","Large Arrow","Explosive Arrow"};
         std::vector<std::string> listOfInventory = {"SP Refill", "Crossbow Shot","Steak","Small Potion", "Stew","Long Bow"};
 
+
     public:
         Archer();
         virtual int getHealth() const;
