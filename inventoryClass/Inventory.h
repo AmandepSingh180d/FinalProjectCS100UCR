@@ -18,8 +18,8 @@ class Inventory {
 
     public: 
 
-    std::string checkInventory(int& userChoice, Character& playerCharacter);
-    int useInventory(int& userChoice, Character& playerCharacter);
+    std::string checkInventory(int& userChoice, Character* playerCharacter);
+    int useInventory(int& userChoice, Character* playerCharacter);
 
 };  
 

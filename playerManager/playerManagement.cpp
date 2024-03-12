@@ -3,6 +3,7 @@
 #include <random>
 #include <vector>
 
+
 void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     int dmgNum = 0;
     int spNum = 0;
@@ -90,6 +91,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     applyDamage(atkPNum, dmgNum);
 }
 
+
 void PlayerManager::applyDamage(int pNum, int dmg){
     if(pNum == pMage->getplayerOrderNum()){
         pMage->setHealth(pMage->getHealth() - dmg);
@@ -104,6 +106,7 @@ void PlayerManager::applyDamage(int pNum, int dmg){
         pThief->setHealth(pThief->getHealth() - dmg);
     }
 }
+
 PlayerManager::PlayerManager(): menu(pArcher, pKnight, pMage, pThief){
     battle();
 }
@@ -132,13 +135,25 @@ void PlayerManager::callBattleArcher(){
         invChoice = menu.menuArcherInvChoice(pAttack, pDefend, pDice); // Change from menuMageInvChoice to menuArcherInvChoice
         if (invChoice == 1) {
             // CallInv
+            int itemNum = inventory.useInventory(invChoice, pArcher);
+            itemUse(itemNum, pArcher);
+            
+
         } else if (invChoice == 2) {
             // callInv
+            int itemNum = inventory.useInventory(invChoice, pArcher);
+            itemUse(itemNum, pArcher);
+
         } else if (invChoice == 3) {
             // callInv
+            int itemNum = inventory.useInventory(invChoice, pArcher);
+            itemUse(itemNum, pArcher);
+            
         }
     } else if (actionChoice == 4) {
         // self attack
+        std::cout << "The Archer tried to run away but tripped over a rock!" << std::endl << std::endl;
+        pArcher->setHealth(pArcher->getHealth() - 10);
     }
 
 }
@@ -168,13 +183,21 @@ void PlayerManager::callBattleKnight(){
         invChoice = menu.menuKnightInvChoice(pAttack, pDefend, pDice); // Change from menuArcherInvChoice to menuKnightInvChoice
         if (invChoice == 1) {
             // CallInv
+            int itemNum = inventory.useInventory(invChoice, pKnight);
+            itemUse(itemNum, pKnight);
         } else if (invChoice == 2) {
             // callInv
+            int itemNum = inventory.useInventory(invChoice, pKnight);
+            itemUse(itemNum, pKnight);
         } else if (invChoice == 3) {
             // callInv
+            int itemNum = inventory.useInventory(invChoice, pKnight);
+            itemUse(itemNum, pKnight);
         }
     } else if (actionChoice == 4) {
         // self attack
+        std::cout << "The Knight tried to run away but tripped over his armour!" << std::endl << std::endl;
+        pKnight->setHealth(pKnight->getHealth() - 10);
     }
 
 }
@@ -204,13 +227,23 @@ void PlayerManager::callBattleThief(){
         invChoice = menu.menuThiefInvChoice(pAttack, pDefend, pDice); // Change from menuArcherInvChoice to menuThiefInvChoice
         if (invChoice == 1) {
             // CallInv
+
+            int itemNum = inventory.useInventory(invChoice, pThief);
+            itemUse(itemNum, pThief);
+
         } else if (invChoice == 2) {
             // callInv
+            int itemNum = inventory.useInventory(invChoice, pThief);
+            itemUse(itemNum, pThief);
         } else if (invChoice == 3) {
             // callInv
+            int itemNum = inventory.useInventory(invChoice, pThief);
+            itemUse(itemNum, pThief);
         }
     } else if (actionChoice == 4) {
         // self attack
+        std::cout << "The Thief tried to run away but felt bad lmao!" << std::endl << std::endl;
+        pThief->setHealth(pThief->getHealth() - 10);
     }
 }
 
@@ -245,16 +278,24 @@ void PlayerManager::callBattleMage(){
         invChoice = menu.menuMageInvChoice(pAttack,pDefend,pDice);
         if(invChoice == 1){
             //CallInv
+            int itemNum = inventory.useInventory(invChoice, pMage);
+            itemUse(itemNum, pMage);
         }
         else if (invChoice == 2){
             //callInv
+            int itemNum = inventory.useInventory(invChoice, pMage);
+            itemUse(itemNum, pMage);
         }
         else if (invChoice == 3){
             //callInv
+            int itemNum = inventory.useInventory(invChoice, pMage);
+            itemUse(itemNum, pMage);
         }
     }
     else if(actionChoice == 4){
         //self attack
+        std::cout << "The Mage tried to run away but tripped over their staff (lololol loser)!" << std::endl << std::endl;
+        pMage->setHealth(pMage->getHealth() - 10);
     }
 }
 void PlayerManager::battle(){
@@ -407,4 +448,45 @@ int PlayerManager::findWinner(){
         return pThief->getplayerOrderNum();
     }
     return 0;
+}
+
+
+void PlayerManager::itemUse(int itemNumber, Character* character) {
+    
+    if (itemNumber == 1) {
+        
+        int newHealth = character->getHealth() + 15;
+        std::cout << "Player " << pAttack << " Used Smaller Heal!" << std::endl;
+        character->setHealth(newHealth);
+    }
+
+    else if (itemNumber == 2) {
+        std::cout << "Player " << pAttack << " Used Better Heal!" << std::endl;
+        int newHealth = character->getHealth() + 25;
+        character->setHealth(newHealth);
+
+    }
+
+    else if (itemNumber == 3) {
+        std::cout << "Player " << pAttack << " Used SP Refill!" << std::endl;
+        int newSP = character->getSpecialPoints() + 5;
+        character->setSpecialPoints(newSP);
+    } 
+
+    else if (itemNumber == 4) {
+        std::cout << "Player " << pAttack << " Used Better SP Refill" << std::endl;
+        int newSP = character->getSpecialPoints() + 10;
+        character->setSpecialPoints(newSP);
+    }
+
+    if (itemNumber == 5) {
+        std::cout <<  "Player " << pAttack << "Used Small Attack Item!" << std::endl;
+        applyDamage(pDefend, 15);
+    }
+    
+    if (itemNumber == 6) {
+        std::cout <<  "Player " << pAttack <<" Used Greater Attack Item!" << std::endl;
+        applyDamage(pDefend, 25);
+
+    }
 }

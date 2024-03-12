@@ -3,14 +3,14 @@
 #include <string>
 #include "../choiceClass/Choice.h"
 
-std::string Inventory::checkInventory(int& userChoice, Character& playerCharacter) {
-    std::vector<std::string> characterInventory = playerCharacter.getInventory();
+std::string Inventory::checkInventory(int& userChoice, Character* playerCharacter) {
+    std::vector<std::string> characterInventory = playerCharacter->getInventory();
     
     return characterInventory.at(userChoice-1);
 }
 
 
-int Inventory::useInventory(int& userChoice, Character& playerCharacter) {
+int Inventory::useInventory(int& userChoice, Character* playerCharacter) {
     std::string item = checkInventory(userChoice, playerCharacter);
 
     // 1 for healing items 
