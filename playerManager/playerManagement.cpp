@@ -3,6 +3,95 @@
 #include <random>
 #include <vector>
 
+
+void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
+    int dmgNum = 0;
+    int spNum = 0;
+    //for mage
+    if(pNum == pMage->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 1, pDice);
+            pMage->setSpecialPoints(pMage->getSpecialPoints()-5);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 2, pDice);
+            pMage->setSpecialPoints(pMage->getSpecialPoints()-10);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 3, pDice);
+            pMage->setSpecialPoints(pMage->getSpecialPoints()-15);
+        }
+    }
+
+    //for archer
+    else if(pNum == pArcher->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 1, pDice);
+            pArcher->setSpecialPoints(pArcher->getSpecialPoints()-5);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 2, pDice);
+            pArcher->setSpecialPoints(pArcher->getSpecialPoints()-10);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 3, pDice);
+            pArcher->setSpecialPoints(pArcher->getSpecialPoints()-15);
+        }
+    }
+
+    //for knight
+    else if(pNum == pKnight->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 1, pDice);
+            pKnight->setSpecialPoints(pKnight->getSpecialPoints()-5);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 2, pDice);
+            pKnight->setSpecialPoints(pKnight->getSpecialPoints()-10);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 3, pDice);
+            pKnight->setSpecialPoints(pKnight->getSpecialPoints()-15);
+        }
+    }
+
+    //for thief
+    else if(pNum == pThief->getplayerOrderNum()){
+        if (atkType == 1){
+            dmgNum = mAtk.basicAttack();
+            dmgNum+=pDice;
+        }
+        else if (atkType == 2){
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 1, pDice);
+            pThief->setSpecialPoints(pThief->getSpecialPoints()-5);
+        }
+        else if (atkType == 3){
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 2, pDice);
+            pThief->setSpecialPoints(pThief->getSpecialPoints()-10);
+        }
+        else if (atkType == 4){
+            dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 3, pDice);
+            pThief->setSpecialPoints(pThief->getSpecialPoints()-15);
+        }
+    }
+
+    //apply sp damage
+    applyDamage(atkPNum, dmgNum);
+}
+
+
 void PlayerManager::applyDamage(int pNum, int dmg){
     if(pNum == pMage->getplayerOrderNum()){
         pMage->setHealth(pMage->getHealth() - dmg);
@@ -22,21 +111,25 @@ PlayerManager::PlayerManager(): menu(pArcher, pKnight, pMage, pThief){
     battle();
 }
 void PlayerManager::callBattleArcher(){
+    menu.clearBattleMenu();
     pAttack = pArcher->getplayerOrderNum(); // Change from pMage to pArcher
     pDefend = menu.chooseWhoAttack(pAttack);
     pDice = rollDice.rollDice();
-    actionChoice = menu.menuBattleChoice(pAttack, pDefend, pDice);
+    actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
     if (actionChoice == 1) {
-        // callAttack();
+        callAttack(1, pAttack, pDefend);
     } else if (actionChoice == 2) {
         // callSpecialAttack
         spChoice = menu.menuArcherSPChoice(pAttack, pDefend, pDice); // Change from menuMageSPChoice to menuArcherSPChoice
         if (spChoice == 1) {
             // callSPattack
+            callAttack(2, pAttack, pDefend);
         } else if (spChoice == 2) {
             // callSPattack
+            callAttack(3, pAttack, pDefend);
         } else if (spChoice == 3) {
             // callSPattack
+            callAttack(4, pAttack, pDefend);
         }
     } else if (actionChoice == 3) {
         invChoice = menu.menuArcherInvChoice(pAttack, pDefend, pDice); // Change from menuMageInvChoice to menuArcherInvChoice
@@ -65,21 +158,26 @@ void PlayerManager::callBattleArcher(){
 
 }
 void PlayerManager::callBattleKnight(){
-    pAttack = pKnight->getplayerOrderNum(); // Change from pArcher to pKnight
+    menu.clearBattleMenu();
+    pAttack = pKnight->getplayerOrderNum(); // Change from pMage to pArcher
     pDefend = menu.chooseWhoAttack(pAttack);
     pDice = rollDice.rollDice();
-    actionChoice = menu.menuBattleChoice(pAttack, pDefend, pDice);
+    actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
     if (actionChoice == 1) {
         // callAttack();
+        callAttack(1, pAttack, pDefend);
     } else if (actionChoice == 2) {
         // callSpecialAttack
         spChoice = menu.menuKnightSPChoice(pAttack, pDefend, pDice); // Change from menuArcherSPChoice to menuKnightSPChoice
         if (spChoice == 1) {
             // callSPattack
+            callAttack(2, pAttack, pDefend);
         } else if (spChoice == 2) {
             // callSPattack
+            callAttack(3, pAttack, pDefend);
         } else if (spChoice == 3) {
             // callSPattack
+            callAttack(4, pAttack, pDefend);
         }
     } else if (actionChoice == 3) {
         invChoice = menu.menuKnightInvChoice(pAttack, pDefend, pDice); // Change from menuArcherInvChoice to menuKnightInvChoice
@@ -104,21 +202,26 @@ void PlayerManager::callBattleKnight(){
 
 }
 void PlayerManager::callBattleThief(){
-    pAttack = pThief->getplayerOrderNum(); // Change from pArcher to pThief
+    menu.clearBattleMenu();
+    pAttack = pThief->getplayerOrderNum(); // Change from pMage to pArcher
     pDefend = menu.chooseWhoAttack(pAttack);
     pDice = rollDice.rollDice();
-    actionChoice = menu.menuBattleChoice(pAttack, pDefend, pDice);
+    actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
     if (actionChoice == 1) {
         // callAttack();
+        callAttack(1, pAttack, pDefend);
     } else if (actionChoice == 2) {
         // callSpecialAttack
         spChoice = menu.menuThiefSPChoice(pAttack, pDefend, pDice); // Change from menuArcherSPChoice to menuThiefSPChoice
         if (spChoice == 1) {
             // callSPattack
+            callAttack(2, pAttack, pDefend);
         } else if (spChoice == 2) {
             // callSPattack
+            callAttack(3, pAttack, pDefend);
         } else if (spChoice == 3) {
             // callSPattack
+            callAttack(4, pAttack, pDefend);
         }
     } else if (actionChoice == 3) {
         invChoice = menu.menuThiefInvChoice(pAttack, pDefend, pDice); // Change from menuArcherInvChoice to menuThiefInvChoice
@@ -145,24 +248,30 @@ void PlayerManager::callBattleThief(){
 }
 
 void PlayerManager::callBattleMage(){
-    pAttack=pMage->getplayerOrderNum();
-    pDefend=menu.chooseWhoAttack(pAttack);
-    pDice=rollDice.rollDice();
+    menu.clearBattleMenu();
+    pAttack = pMage->getplayerOrderNum(); // Change from pMage to pArcher
+    pDefend = menu.chooseWhoAttack(pAttack);
+    pDice = rollDice.rollDice();
     actionChoice=menu.menuBattleChoice(pAttack,pDefend,pDice);
+    
     if(actionChoice==1){
         //callAttack();
+        callAttack(1, pAttack, pDefend);
     }
     else if(actionChoice==2){
         //callSpecialAttack
         spChoice=menu.menuMageSPChoice(pAttack,pDefend,pDice);
         if(spChoice == 1){
             //callSPattack
+            callAttack(2, pAttack, pDefend);
         }
         else if (spChoice == 2){
             //callSPattack
+            callAttack(3, pAttack, pDefend);
         }
         else if (spChoice == 3){
             //callSPattack
+            callAttack(4, pAttack, pDefend);
         }
     }
     else if(actionChoice == 3){
@@ -207,6 +316,7 @@ void PlayerManager::battle(){
     while(end!=true){
         order = getPlayerOrder();
         fixPlayerSPHP();
+        endCheck();
         if(order == pMage->getPlayerRotation()){
             if(pMage->getHealth()<=0){
                 p1Dead=true;
@@ -251,13 +361,13 @@ void PlayerManager::setPlayerCharChoice(int userNum, int charChoice){
         pMage->setplayerOrderNum(userNum);
     }
     else if(charChoice==2){
-        pKnight->setplayerOrderNum(userNum);
+        pArcher->setplayerOrderNum(userNum);
     }
     else if(charChoice==3){
         pThief->setplayerOrderNum(userNum);
     }
     else if(charChoice==4){
-        pArcher->setplayerOrderNum(userNum);
+        pKnight->setplayerOrderNum(userNum);
     }
 }
 

@@ -46,8 +46,13 @@ class PlayerManager {
         int actionChoice=0;
         int spChoice=0;
         int invChoice=0;
+        int p1=0;
+        int p2=0;
+        int p3=0;
+        int p4=0;
         Menu menu;
     public:
+        void callAttack(int attackType, int playerNum, int attackingPlayernum);
         void applyDamage(int playerNum, int dmg);
         PlayerManager();
         void battle();
