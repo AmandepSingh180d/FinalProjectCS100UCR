@@ -13,14 +13,14 @@
 #include "../attackPlayer/knightAttack.h"
 #include "../attackPlayer/mageAttack.h"
 #include "../attackPlayer/thiefAttack.h"
-#include "../inventoryClass/Inventory.h"
 //Character inventory
-
+#include "../inventoryClass/Inventory.h"
 //Dice Roll
 #include "../diceRoll/diceRoll.h"
 //Menu
 #include "../menu/menu.h"
-
+//Statmanager
+#include "../statManagerClass/statManager.h"
 class PlayerManager {
     private:
         Mage* pMage = new Mage;
@@ -46,11 +46,12 @@ class PlayerManager {
         int actionChoice=0;
         int spChoice=0;
         int invChoice=0;
-        int p1=0;
-        int p2=0;
-        int p3=0;
-        int p4=0;
+        int mageStat=0;
+        int archerStat=0;
+        int thiefStat=0;
+        int knightStat=0;
         Menu menu;
+        statManager sManage;
     public:
         void callAttack(int attackType, int playerNum, int attackingPlayernum);
         void applyDamage(int playerNum, int dmg);
@@ -67,6 +68,7 @@ class PlayerManager {
         void callBattleArcher();
         int findWinner();
         void itemUse(int itemNumber, Character* character );
+        void setStats();
 };
 
 #endif // PLAYERMANAGER_H

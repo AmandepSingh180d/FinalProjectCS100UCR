@@ -25,6 +25,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.specialAttack(pMage->getSpecialPoints(), 3, pDice);
             pMage->setSpecialPoints(pMage->getSpecialPoints()-15);
         }
+        sManage.updateStats(1,dmgNum);
     }
 
     //for archer
@@ -45,6 +46,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.specialAttack(pArcher->getSpecialPoints(), 3, pDice);
             pArcher->setSpecialPoints(pArcher->getSpecialPoints()-15);
         }
+        sManage.updateStats(2,dmgNum);
     }
 
     //for knight
@@ -65,6 +67,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.specialAttack(pKnight->getSpecialPoints(), 3, pDice);
             pKnight->setSpecialPoints(pKnight->getSpecialPoints()-15);
         }
+        sManage.updateStats(4,dmgNum);
     }
 
     //for thief
@@ -85,6 +88,7 @@ void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
             dmgNum = mAtk.specialAttack(pThief->getSpecialPoints(), 3, pDice);
             pThief->setSpecialPoints(pThief->getSpecialPoints()-15);
         }
+        sManage.updateStats(3,dmgNum);
     }
 
     //apply sp damage
@@ -154,6 +158,7 @@ void PlayerManager::callBattleArcher(){
         // self attack
         std::cout << "The Archer tried to run away but tripped over a rock!" << std::endl << std::endl;
         pArcher->setHealth(pArcher->getHealth() - 10);
+        sManage.updateStats(2,10);
     }
 
 }
@@ -198,6 +203,7 @@ void PlayerManager::callBattleKnight(){
         // self attack
         std::cout << "The Knight tried to run away but tripped over his armour!" << std::endl << std::endl;
         pKnight->setHealth(pKnight->getHealth() - 10);
+        sManage.updateStats(4,10);
     }
 
 }
@@ -244,6 +250,7 @@ void PlayerManager::callBattleThief(){
         // self attack
         std::cout << "The Thief tried to run away but felt bad lmao!" << std::endl << std::endl;
         pThief->setHealth(pThief->getHealth() - 10);
+        sManage.updateStats(3,10);
     }
 }
 
@@ -296,6 +303,7 @@ void PlayerManager::callBattleMage(){
         //self attack
         std::cout << "The Mage tried to run away but tripped over their staff (lololol loser)!" << std::endl << std::endl;
         pMage->setHealth(pMage->getHealth() - 10);
+        sManage.updateStats(1,10);
     }
 }
 void PlayerManager::battle(){
@@ -349,10 +357,12 @@ void PlayerManager::battle(){
                 callBattleThief();
             }
         }
+        endCheck();
     }
     fixPlayerSPHP();
     int winPlayer = findWinner();
-    menu.menuTrophyCeremony(winPlayer,1,1,1,1);//1's are temp
+    setStats();
+    menu.menuTrophyCeremony(winPlayer,mageStat,archerStat,thiefStat,knightStat);//1's are temp
     menu.playAgain();
     //tempTrophy
 }
@@ -489,4 +499,11 @@ void PlayerManager::itemUse(int itemNumber, Character* character) {
         applyDamage(pDefend, 25);
 
     }
+}
+void PlayerManager::setStats(){
+    std::vector<int> tempStats= sManage.sendStats();
+    mageStat=tempStats[0];
+    archerStat=tempStats[1];
+    thiefStat=tempStats[2];
+    knightStat=tempStats[3];
 }
