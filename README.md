@@ -14,45 +14,29 @@
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
 
 ### Navigation Diagram
-> <img width="955" alt="nav1" src="https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/navDiagram.png">
+> <img width="955" alt="nav1" src="https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/Fantasy%20Brawl%20Navigation%20Diagram.png">
 
- User starts at title screen. Then chooses single or multiplayer mode. Once option is selected then it will proceed as below:
- 
- * Multiplayer - User is prompted to input number of players, once done is then sent to choose character screen to choose one of 4 different characters with all stats appearing. This will repeat for how many players that are playing with a slight difference to Player _ is choosing. Players will roll to determine turn order. Then game begins at battle screen, where battle is looped for each players turns until there is only on player standing. Each turn players will choose to attack or add to inventory based on dice outcome. Once a player chooses an action, that action will pop up a new menu liting the different kinds of actions or even the inventory screen. Once the action is chosen, the battle screen will loop, but with the next players' name. Once winner is determined user will be taken to trophy screen. User wil then be sent to the play again or quit game screen. Once an action is chosen, the program will end or it will loop back to the title screen depending on the action chosen by the player. 
- 
- * Singleplayer -  Choose character screen to choose one of 4 different characters. Then game begins at battle screen, where battle is looped for the player until the big bad guy is defeated. Each turn players will choose to attack or add to inventory based on dice outcome. Once a player chooses an action, that action will pop up a new menu liting the different kinds of actions or even the inventory screen. Once the action is chosen, the battle screen will loop, but with the npc choosing their actions. Alternatively if the player fails and lands at 0 health, they will be sent to a gameover screen. If the player suceeds and defeats the big bad guy then they will be sent to obtain the trophy.User wil then be sent to the play again or quit game screen. Once an action is chosen, the program will end or it will loop back to the title screen depending on the action chosen by the player. 
-### Screen Layouts
-> ![Title Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/TitleScreen.PNG)
+At first the player will be presented with a display of the Title screen. Once the player enters anything they will be able to continue to the next part in which they will be presented with a character select screen. It will loop 4 times, for the 4 players that will be playing the game, and once the user enters 4 values that differ from each other of inputs 1-4, they will be presented by a choose who to attack screen. This screen will show which character is which player, and the user will be prompted with a question on who they would like to attack. Once they have chosen, they will be brought to the battle screen at which point they have 4 options. To choose option 1 and use a basic attack, option 2 to choose a special attack in which they will be sent to the special attack screen and be prompted with which one they would like to use, option 3 the inventory in which they will be sent to their inventory in which they are able to choose from their inventory, or option 4 to run away like a coward. Once the options have been chosen, the turn will end and go back to the choose who to attack screen. This process will repeat until only 1 player remains with health. Once only 1 player remains, they will receive one last action (to gloat), and then they will be sent to the ending screen in which they can present to the rest of the group. This will then end the game.
+
+> ![Title Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/TitleScreen.png)
 
 This screen above is the first screen that the user will see.
 
-> ![Choose Mode](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/ChooseMode.PNG)
+> ![Character Select](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/CharacterSelect.png)
 
-The screen above user will then be prompted with whether they would like to play multiplayer or singleplayer.
+The screen above will then be prompted with which character they would like to select, this will be repeated with small changes to which player is choosing.
 
-> ![Character Select](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/CharacterSelect.PNG)
+> ![Choose who to Attack](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/ChooseMode.png)
 
-They screen above will then be prompted with which character they would like to select, this will be repeated with small changes to which player is choosing.
+The screen above will then be shown to the player prior to choosing an action, and they must commit to whoever they attack, even themselves.
 
-> ![Battle Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/BattleScreen.PNG)
+> ![Battle Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/BattleScreen.png)
 
 The screen above will then be shown to the player in which they are prompted to choose an action. This screen will be reused for listing attacks and listing inventory of the current player if the options are chosen.
 
-> ![Trophy Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/PlayerWins.PNG)
+> ![Play Again Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/PlayAgain.png)
 
-This screen above will appear to the player when 3 out of the 4 players have 0 health or if in single player, they have defeated the big bad guy. Displaying both stats and the winner.
-
-> ![Game Over Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/GameOver.PNG)
-
-This screen above will appear when singleplayer is chosen and the player has 0 health and has not defeated the big bad guy.
-
-> ![Play Again Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/PlayAgain.PNG)
-
-This screen above will be produced either after the trophy screen, or after the game over screen, prompting the player to restart or quit.
-
-> ![Roll Dice Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/RollDice.PNG)
-
-This screen above will show the players rolling dice, and will be edited with showing the number of the character and what they rolled, once the player enters confirm.
+This screen above will be produced after 3 players have been defeated, displaying their total damage, and health remaining.
 
 ## Class Diagram
  > ![cs100 uml diagram](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/UMLClassDiagram.png)
@@ -81,17 +65,39 @@ The menu class was updated to depend on the asbtractions shown above. This appli
 
 With the character class and subsequent derived classes we applied the open-closed principle and Liskov substitution principle. The open-closed principle was applied as it enabled us to add classes in the future, while not needing to adjust the base class itself, while the liskov substitution principles was applied as the derived classes could easily be used instead of the character base class. This change helped in writing code that was not only reusable but made the code applicable to add any future classes. This also adds the ability to maintain these classes easier and to make testing much smoother.
 
-An additional note is that fixes were applied to the arrows of the derived subclasses and the associations were fixed within player manager.
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
  ## Screenshots
- > Screenshots of the input/output after running your application
+
+ | ![characterChoice](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/CharacterSelectInput.png) | 
+ |:--:| 
+ | The player must choose what character they would like to be, making sure that they do not choose the same character as another player. |
+ 
+ | ![chooseWhoToAttack](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/ChooseMode.png) | 
+ |:--:| 
+ | Once all players have picked their characters, they will receive this screen in which they are able to see who chose which character and must choose who to attack. This will be outputted after every turn is completed. |
+
+ | ![battleChoice](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/BattleScreenInput.png) | 
+ |:--:| 
+ | The battle screen will appear after they have chosen who to attack. They will have to enter whatever action they would like to commit to. |
+
+ | ![specialAttackChoice](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/SpecialAttack.png) | 
+ |:--:| 
+ | The special attack screen will appear if the player has entered the appropriate action, in which they are able to view the damage and sp cost of the special attacks. |
+
+ | ![inventoryAttackChoice](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/Inventory.png) | 
+ |:--:| 
+ | The inventory screen will appear if the player has entered the appropriate action, in which they are able to view their randomized inventory. |
+
+ | ![endingScreen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/PlayAgain.png) | 
+ |:--:| 
+ | The player will receive an ending in which only 1 player remains with the damages to show for bragging rights. |
+ 
  ## Installation/Usage
- > Instructions on installing and running your application
+ **To play Fantasy Brawl**
+ 1. Clone the repository using `git clone https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568.git`
+ 2. Run `cd final-project-asing241-clope265-btaqu001-schen568` and `cd Game/`
+ 3. Run `cmake .` and `make` for this repository
+ 4. Run the `./Fantasy_Brawl` executable
+ 5. Make sure you choose only 1 character per player
+ 6. Enjoy!!!
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+Our project was tested using the GoogleTest Framework. For each of the classes that were tested, a folder was created within the test folder. Separate files were created for non-input tests. Each folder has a separate CMake to test each of the classes individually.
