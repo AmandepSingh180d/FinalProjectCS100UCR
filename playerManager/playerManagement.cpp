@@ -3,7 +3,12 @@
 #include <random>
 #include <vector>
 
-
+PlayerManager::~PlayerManager() {
+        delete pMage;
+        delete pKnight;
+        delete pArcher;
+        delete pThief;
+}
 void PlayerManager::callAttack(int atkType, int pNum, int atkPNum){
     int dmgNum = 0;
     int spNum = 0;

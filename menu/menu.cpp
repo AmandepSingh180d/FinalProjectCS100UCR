@@ -141,61 +141,6 @@ void Menu::clearBattleMenu(){
     std::cout<< "*                                                                                 *\n";//12
     std::cout<< "***********************************************************************************\n";//13 
 }
-/*
-void Menu::findCharChoice(int p1,int p2, int p3,int p4){
-    if(p1 == 1){
-        pMage=1;
-    }
-    else if(p1==2){
-        pArcher=1;
-    }
-    else if(p1==3){
-        pThief=1;
-    }
-    else if(p1==4){
-        pKnight=1;
-    }
-    //p2
-    if(p2 == 1){
-        pMage=2;
-    }
-    else if(p2==2){
-        pArcher=2;
-    }
-    else if(p2==3){
-        pThief=2;
-    }
-    else if(p2==4){
-        pKnight=2;
-    }
-    //p3
-    if(p3 == 1){
-        pMage=3;
-    }
-    else if(p3==2){
-        pArcher=3;
-    }
-    else if(p3==3){
-        pThief=3;
-    }
-    else if(p3==4){
-        pKnight=3;
-    }
-    //p4
-    if(p4 == 1){
-        pMage=4;
-    }
-    else if(p3==2){
-        pArcher=4;
-    }
-    else if(p3==3){
-        pThief=4;
-    }
-    else if(p3==4){
-        pKnight=4;
-    }
-}
-*/
 //SPCHOICE
 int Menu::menuArcherSPChoice(int playerAttack, int playerDefend, int diceRoll){
     system("clear"); //Clears terminal screen

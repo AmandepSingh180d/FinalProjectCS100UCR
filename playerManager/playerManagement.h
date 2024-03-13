@@ -56,6 +56,7 @@ class PlayerManager {
         void callAttack(int attackType, int playerNum, int attackingPlayernum);
         void applyDamage(int playerNum, int dmg);
         PlayerManager();
+        ~PlayerManager();
         void battle();
         void endCheck();
         void fixPlayerSPHP();
