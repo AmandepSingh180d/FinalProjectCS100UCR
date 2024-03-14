@@ -11,13 +11,13 @@
     * Multiplayer mode: Up to 6 characters will brawl to the death! There can be live players as well as CPUs. Players can form alliances to attack certain players together. Stat changes when alliances are formed. The last man standing takes home the Fantasy Brawl trophy. 
     * Each character will have a set of powers, attributes, inventories, weapons, health, attacks, and skills.
     * Players will roll dice to determine the moves they can make. Will input who they want to attack, or ally with.
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
 
 ### Navigation Diagram
 > <img width="955" alt="nav1" src="https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/Fantasy%20Brawl%20Navigation%20Diagram.png">
 
 At first, the player will be presented with a display of the Title screen. Once the player enters anything they will be able to continue to the next part in which they will be presented with a character select screen. It will loop 4 times, for the 4 players that will be playing the game, and once the user enters 4 values that differ from each other of inputs 1-4, they will be presented with a choose who to attack screen. This screen will show which character is which player, and the user will be prompted with a question on who they would like to attack. Once they have chosen, they will be brought to the battle screen at which point they have 4 options. Choose option 1 and use a basic attack, option 2 to choose a special attack in which they will be sent to the special attack screen and be prompted with which one they would like to use, option 3 the inventory in which they will be sent to their inventory in which they can choose from their inventory, or option 4 to run away like a coward. Once the options have been chosen, the turn will end and go back to the choose who to attack screen. This process will repeat until only 1 player remains with health. Once only 1 player remains, they will receive one last action (to gloat), and then they will be sent to the ending screen in which they can present to the rest of the group. This will then end the game.
 
+### Screen Layouts
 > ![Title Screen](https://github.com/cs100/final-project-asing241-clope265-btaqu001-schen568/blob/master/ScreenshotPics/TitleScreen.png)
 
 This screen above is the first screen that the user will see.
