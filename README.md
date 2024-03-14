@@ -99,7 +99,9 @@ The variables for all classes, functions, and variables had their names cleaned 
  2. Run `cd final-project-asing241-clope265-btaqu001-schen568` and `cd Game/`
  3. Run `cmake .` and `make` for this repository
  4. Run the `./Fantasy_Brawl` executable
- 5. Make sure you choose only 1 character per player
- 6. Enjoy!!!
+ 5. Make sure you choose only 1 character per player and have 4 total people
+ 6. Once you choose your character, choose who you would like to attack
+ 7. Then fight them for the last slice of pie
+ 9. Enjoy!!!
  ## Testing
 Our project was tested using the GoogleTest Framework. For each of the classes that were tested, a folder was created within the test folder. Separate files were created for non-input tests. Each folder has a separate CMake to test each of the classes individually.
