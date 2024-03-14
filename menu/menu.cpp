@@ -214,6 +214,7 @@ int Menu::menuThiefSPChoice(int playerAttack, int playerDefend, int diceRoll){
 }
 //INVENTORY
 int Menu::menuArcherInvChoice(int playerAttack, int playerDefend, int diceRoll){
+    system("clear"); //Clears terminal screen
     std::cout<< "***********************************************************************************\n";//1
     std::cout<< "*            Mage["<<myMage->getplayerOrderNum()<<"]         Archer["<<myArcher->getplayerOrderNum()<<"]          Thief["<<myThief->getplayerOrderNum()<<"]         Knight["<<myKnight->getplayerOrderNum()<<"]        *\n";//2
     std::cout<< "*           HP:"<<myMage->getHealth() <<"          HP:"<<myArcher->getHealth() <<"              HP:"<<myThief->getHealth()<<"          HP:"<<myKnight->getHealth()<<"            *\n";//3
